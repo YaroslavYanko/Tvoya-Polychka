@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MobileMenu.module.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const MobileMenu = () => {
   return (
@@ -8,19 +8,19 @@ const MobileMenu = () => {
       <nav className={styles.mobile__menu}>
         <ul>
           <li>
-            <Link to={'/'}>Головна</Link>
+            <a href={'/'}>Головна</a>
           </li>
           <li>
-            <Link to={'/'}>Доставка</Link>
+            <a href={'/'}>Доставка</a>
           </li>
           <li>
-            <Link to={'/category'}>Категорії</Link>
+            <a href={'/category'}>Категорії</a>
           </li>
           <li>
-            <Link to={'/like'}>Улюблене</Link>
+            <a href={'/like'}>Улюблене</a>
           </li>
           <li>
-            <Link to={'/profile'}>Профіль</Link>
+            <a href={'/profile'}>Профіль</a>
           </li>
         </ul>
       </nav>
