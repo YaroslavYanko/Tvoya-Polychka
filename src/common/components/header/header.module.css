@@ -1,0 +1,131 @@
+header {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 15px 15px 0px;
+}
+.header__inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__inner_logo {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+.header__inner_user {
+  width: 200px;
+}
+.nav__user_mine {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__basket,
+.nav__favorite,
+.nav__mypage {
+  width: 40px;
+  height: 40px;
+  font-size: 0px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.nav__basket {
+  background-image: url("/public/icons_users/cart.png");
+}
+.nav__favorite {
+  background-image: url("/public/icons_users/favorite.png");
+}
+.nav__mypage {
+  background-image: url("/public/icons_users/accaunt.png");
+}
+.header__menu {
+  padding-top: 30px;
+}
+
+.header__menu_nav {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: space-between;
+}
+.header__category {
+  position: relative;
+  transition: 0.5s ease all;
+}
+
+.header__category:hover {
+  color: rgb(138, 138, 138);
+}
+.header__category.active::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+.header__category_discount {
+  color: red;
+}
+
+@media screen and (max-width: 600px) {
+  .header__inner_logo h3 {
+    font-size: 1.5rem;
+  }
+  .header__inner_user {
+    width: 150px;
+  }
+  .header__menu_nav{
+    padding: 0;
+  }
+  .header__menu_nav a {
+    font-size: 0.9rem;
+
+  }
+  .hiden{
+    display: none;
+  }
+  .nav__user_mine{
+    flex-direction: row-reverse;
+  }
+}
+
+/* -------------------------Category---------------- */
+
+.category__drop_down_list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.849);
+  height: 300px;
+  transition: 1s all ease;
+}
+.container {
+  width: 1050px;
+}
+.category__sub {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container nav {
+  display: flex;
+}
+.category__sub_second {
+  margin-top: 15px;
+  padding: 20px;
+}
+.category__sub_second li {
+  padding-top: 15px;
+}
+.container nav > ul:not(:last-child) {
+  border-right: 1px solid rgb(182, 182, 182);
+}
+.category__general {
+  font-weight: bold;
+  padding-top: 0;
+}

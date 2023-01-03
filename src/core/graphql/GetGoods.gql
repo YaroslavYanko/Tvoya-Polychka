@@ -1,0 +1,10 @@
+query GetGoods {
+  goods {
+    id
+    image
+    description
+    price
+    shortName
+    title
+  }
+}
