@@ -3,7 +3,7 @@ import { useState } from "react";
 import HeaderMenu from "./HeaderMenu/HeaderMenu";
 import DropDownList from "./DropDownList/DropDownList";
 
-const HeaderContainer = () => {
+const HeaderContainer = ({showAllProducts}) => {
   const [useCategory, setCategory] = useState(false);
   const showCategory = (e) => {
     setCategory(true);
@@ -16,10 +16,11 @@ const HeaderContainer = () => {
     }
   };
 
+
   return (
     <>
       <HeaderMenu hideCategory={hideCategory} showCategory={showCategory} />
-      {useCategory ? <DropDownList hideCategory={hideCategory} /> : null}
+      {useCategory ? <DropDownList showAllProducts={showAllProducts} hideCategory={hideCategory} /> : null}
     </>
   );
 };

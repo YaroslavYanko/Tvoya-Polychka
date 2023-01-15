@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "../header.module.css";
+import { Link } from "react-router-dom";
 
-const DropDownList = ({ hideCategory, showCategory }) => {
+const DropDownList = ({ hideCategory, showCategory ,showAllProducts}) => {
   return (
     <div
       onMouseLeave={hideCategory}
@@ -16,7 +17,7 @@ const DropDownList = ({ hideCategory, showCategory }) => {
         <nav>
           <ul className={styles.category__sub_second}>
             <li className={styles.category__general}>
-              <a href="/">Загальне</a>
+              <Link onClick={()=>showAllProducts('Сlothes')} to="/products">Загальне</Link>
             </li>
           </ul>
 

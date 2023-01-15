@@ -1,13 +1,24 @@
 header {
   max-width: 1050px;
   margin: 0 auto;
-  padding: 15px 15px 0px;
+
+}
+.header__box{
+  width: 100%;
+  background-color: white;
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px 15px 0px;
 }
 .header__inner {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
+  width: 1050px;
+
 }
 .header__inner_logo {
   font-size: 30px;
@@ -40,7 +51,7 @@ header {
   background-image: url("/public/icons_users/accaunt.png");
 }
 .header__menu {
-  padding-top: 30px;
+  padding-top: 80px;
 }
 
 .header__menu_nav {

@@ -1,10 +1,17 @@
 query GetGoods {
-  goods {
+  categories {
     id
-    image
-    description
-    price
-    shortName
+    slug
     title
+    goods_items {
+      id
+      image
+      description
+      price
+      shortName
+      title
+      category_id
+    }
   }
 }
+
