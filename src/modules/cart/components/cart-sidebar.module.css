@@ -1,0 +1,117 @@
+.cart__sidebar {
+  width: 500px;
+  padding: 10px;
+  position: fixed;
+  background-color: white;
+  right: 0;
+  height: 100vh;
+  z-index: 999;
+  z-index: 99;
+  -webkit-box-shadow: -10px 0px 13px -7px #000000,
+    -50px -50px 0px -30px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000,
+    -50px -50px 0px -30px rgba(0, 0, 0, 0);
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+  top: 70px;
+  border-top-left-radius: 25px;
+}
+.cart__sidebar_show {
+  transition: all 0.5s ease;
+  transform: translateX(130%);
+}
+.cart__box_image{
+  width: 200px;
+}
+.cart__sidebar_title {
+  display: flex;
+  justify-content: space-between;
+}
+.cart__sidebar_basket {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.basket__items_empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+.basket__items_empty > span {
+  margin-top: 20px;
+}
+.cart__item {
+  width: 100%;
+  padding: 10px;
+  border-bottom: solid #202429 1px;
+}
+.cart__item_info {
+  display: flex;
+  align-items: center;
+
+}
+.cart__item_image {
+  border-radius: 10px;
+  height: 110px;
+}
+.cart__info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  width: 100%;
+}
+.cart__info span{
+  padding-bottom: 10px;
+  color: #202429;
+  font-weight: 700;
+}
+.cart__general_price {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #202429;
+}
+
+.cart_sidebar_order {
+  width: 100%;
+  height: 35px;
+  margin-top: 25px;
+}
+.cart__basket_items {
+  overflow-y: auto;
+  height: 550px;
+  width: 100%;
+}
+.sidebar__btn_close{
+  width: 40px;
+  text-transform: uppercase;
+  color: white;
+}
+.cart__sidebar_title span{
+  font-weight: bold;
+  font-size: 24px;
+  color: #202429;
+}
+.cart__btn_delete{
+  font-weight: 600;
+    width: 95px;
+    height: 28px;
+    font-size: 15px;
+
+}
+.cart__item_btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart__item input{
+  border-color: #202429;
+}

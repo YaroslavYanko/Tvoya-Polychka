@@ -1,0 +1,24 @@
+.sms__counter{
+  width: 85%;
+}
+.sms__counter_button{
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 800;
+  border: solid 2px #202429;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  background-color: #202429;
+  color: white;
+  margin-top: 15px;
+}
+.sms__counter_hover:hover{
+  background-color:  #3f4246;
+  border-color: #3f4246 ;
+}
+
+.sms__counter_wait{
+  cursor:wait;
+}

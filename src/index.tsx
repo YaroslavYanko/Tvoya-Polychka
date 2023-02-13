@@ -4,6 +4,7 @@ import './index.css';
 import App from '@app/App';
 import { ApolloProvider } from '@apollo/client';
 import { apolloClient } from '@app/core/apollo-client';
+import { ToastContainer } from 'react-toastify';
 
 
 const root = ReactDOM.createRoot(
@@ -11,8 +12,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
    <ApolloProvider client={apolloClient}>
+    <ToastContainer/>
        <App />
    </ApolloProvider>
-
 );
 

@@ -1,0 +1,29 @@
+.wrapper__product{
+    width: 325px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.product__card_description{
+    height: 75px;
+    padding: 10px;
+}
+.product__card_shortName{
+    font-size: 1em;
+}
+.btn__card{
+    cursor: pointer;
+    border-radius: 3px;
+    width: 150px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 800;
+    border: none;
+    transition: 0.5s all ease;
+    color: black;
+    text-transform: uppercase;
+    background-color: whitesmoke;
+}

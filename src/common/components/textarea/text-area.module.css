@@ -1,0 +1,24 @@
+.wrapper__textarea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+textarea {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: solid 1px #e4e6e9;
+  outline: none;
+  transition: 0.5s all ease;
+  font-size: 16px;
+  margin-top: 10px
+}
+textarea:focus {
+  border: solid 1px #7f8081;
+}
+
+.wrapper__textarea > label {
+  font-size: 16px;
+  color: #202429;
+  font-weight: 700;
+}

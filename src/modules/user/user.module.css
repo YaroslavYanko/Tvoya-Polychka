@@ -1,0 +1,17 @@
+.tr__table_info{
+    background-color:skyblue;
+   
+}
+.tr__table_info :last-child,.tr__table_info:first-child{
+    width: 120px;
+}
+table{
+    margin-top: 25px;
+}
+thead tr th{
+    padding-bottom:  15px;
+}
+td{
+    text-align: center;
+    padding: 15px;
+}

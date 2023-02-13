@@ -3,9 +3,11 @@
   display: flex;
   justify-content: center;
   background-color: #f7f8fa;
+  margin-top: auto;
+
 }
 .container {
-  width: 1050px;
+  width: 1300px;
   padding: 35px 0px 100px;
 }
 .footer__info nav ul {

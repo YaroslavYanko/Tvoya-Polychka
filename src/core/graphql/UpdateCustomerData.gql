@@ -1,0 +1,17 @@
+mutation UpdateCustomerData(
+  $id: uuid!
+  $address: String
+  $name: String
+  $surname: String
+) {
+  update_customers_by_pk(
+    pk_columns: { id: $id }
+    _set: { address: $address, name: $name, surname: $surname }
+  ) {
+    address
+    name
+    surname
+    id
+    phone
+  }
+}

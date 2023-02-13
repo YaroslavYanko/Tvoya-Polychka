@@ -1,0 +1,13 @@
+.container{
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.wrapper__checkout_form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 70px;
+    align-items: flex-start;
+}

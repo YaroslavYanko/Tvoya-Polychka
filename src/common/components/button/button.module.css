@@ -1,0 +1,16 @@
+.btn__form_in{
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 800;
+  border: solid 2px #202429;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  background-color: #202429;
+  color: white;
+}
+.btn__form_in:hover{
+  background-color:  #3f4246;
+  border-color: #3f4246 ;
+}

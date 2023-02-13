@@ -5,11 +5,11 @@ import styles from "..//products-item.module.css";
 
 const ProductsList = ({ item,title }) => {
   const products = item.slice(0,8)
- console.log(item)
+
   return (
     <div className={styles.container}>
       <div className={styles.products__title}>
-        <h3>{title}</h3>
+        <h2>{title}</h2>
       </div>
       <div className={styles.products}>
         {products.map((item) => (

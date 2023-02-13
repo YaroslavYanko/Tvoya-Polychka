@@ -1,0 +1,31 @@
+import { useCartItems } from '@app/modules/checkout/hooks/use-cart-items';
+
+import { CartItem } from '../cart-item';
+
+import styles from "../cart-sidebar.module.css";
+
+export const CartList = () => {
+
+
+  const { data, previousData,cartItems } = useCartItems()
+
+  const cartSum =
+  data?.goods.reduce((acc, value) => {
+    return acc + value.price * cartItems[value.id];
+  }, 0) ?? 0;
+
+  return (  
+      <div className={styles.cart__sidebar_basket}>
+          <div className={styles.cart__basket_items}>
+            {(data || previousData)?.goods.map((item) => (
+              <CartItem
+                {...item}
+                count={cartItems[item.id]}
+                productItemId={item.id}
+                key={`productCartItem-${item.id}`}
+              />
+            ))}
+          </div>
+        </div>
+  )
+}

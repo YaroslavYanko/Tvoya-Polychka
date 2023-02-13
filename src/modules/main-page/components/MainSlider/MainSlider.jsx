@@ -1,11 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
 
-import dataSlider from "../../../../imgSlider.json"
+import dataSlider from "../../../../imgSlider.json";
 
 import "./slick.css";
 import "./slick-theme.css";
-import './mainSlider.css'
+import "./mainSlider.css";
 
 const MainSlider = () => {
   const settings = {
@@ -25,25 +25,25 @@ const MainSlider = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="sliderWrapper">
@@ -54,6 +54,8 @@ const MainSlider = () => {
           </div>
         ))}
       </Slider>
+
+
     </div>
   );
 };

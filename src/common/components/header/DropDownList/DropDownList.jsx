@@ -17,11 +17,11 @@ const DropDownList = ({ hideCategory, showCategory ,showAllProducts}) => {
         <nav>
           <ul className={styles.category__sub_second}>
             <li className={styles.category__general}>
-              <Link onClick={()=>showAllProducts('Сlothes')} to="/products">Загальне</Link>
+              <Link  to="/products">Загальне</Link>
             </li>
           </ul>
 
-          <ul className={styles.category__sub_second}>
+          {/* <ul className={styles.category__sub_second}>
             <li className={styles.category__general}>
               <a href="/">Догляд за шікрою</a>
             </li>
@@ -31,29 +31,32 @@ const DropDownList = ({ hideCategory, showCategory ,showAllProducts}) => {
             <li>
               <a href="/">Емульсія</a>
             </li>
-          </ul>
+          </ul> */}
           <ul className={styles.category__sub_second}>
             <li className={styles.category__general}>
               <a href="/">Догляд за волоссям</a>
             </li>
             <li>
-              <a href="/">Шампунь</a>
+              <Link to="/products">Шампунь</Link>
             </li>
             <li>
+              <Link to="/products">Фарба для волосся</Link>
+            </li>
+            {/* <li>
               <a href="/">Лосьйон</a>
             </li>
             <li>
               <a href="/">Ополіскувач</a>
-            </li>
+            </li> */}
           </ul>
-          <ul className={styles.category__sub_second}>
+          {/* <ul className={styles.category__sub_second}>
             <li className={styles.category__general}>
               <a href="/">Макіяж</a>
             </li>
             <li>
               <a href="/">База</a>
             </li>
-          </ul>
+          </ul> */}
         </nav>
 
 

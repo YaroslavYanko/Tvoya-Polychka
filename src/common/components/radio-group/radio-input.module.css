@@ -1,0 +1,11 @@
+.wrapper__radio_btn{
+    width: 100%;
+    padding: 10px;
+}
+.input__radio_wrapper>input,label{
+    cursor: pointer;
+}
+.input__radio_label{
+    padding-left: 10px;
+  
+}

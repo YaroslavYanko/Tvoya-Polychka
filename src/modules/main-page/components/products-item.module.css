@@ -1,22 +1,32 @@
+
+.main__page_wrapper{
+  margin-top: 100px;
+}
 .container {
-  max-width: 1050px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 50px 0px 50px 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  padding-top: 50px;
+
 }
-.products__title{
+.products__title {
   width: 100%;
 }
-.wrapper__product{
-  width: 250px;
+.products__title > h2 {
+  font-size: 36px;
+}
+.wrapper__product {
+  width: 280px;
   display: flex;
 }
 .product__card {
@@ -24,11 +34,9 @@
 }
 .product__card img {
   background-repeat: no-repeat;
-  width: 250px;
-  height: 281px;
   background-size: cover;
 }
-.product__card_description{
+.product__card_description {
   width: 100%;
   padding: 10px;
 }
@@ -62,12 +70,16 @@
   border: solid 1px black;
 }
 
+.container__usefulInformation {
+  width: 100%;
+}
+
 @media screen and (max-width: 600px) {
-  .container{
-    padding:  15px 0;
+  .container {
+    padding: 15px 0;
   }
-  .wrapper__product{
-     width: 180px;
+  .wrapper__product {
+    width: 180px;
   }
 
   .product__card {
@@ -76,54 +88,52 @@
     padding-top: 25px;
   }
 
-  .product__card img{
+  .product__card img {
     width: 180px;
     height: 180px;
     border-radius: 15px;
   }
- .products{
-  justify-content: space-evenly;
-
- }
- .btn__catalog{
-  margin-top: 35px;
- }
+  .products {
+    justify-content: space-evenly;
+  }
+  .btn__catalog {
+    margin-top: 35px;
+  }
 }
-
 
 /* ------------------------------Skeleton------------------ */
 
 .skeleton {
-  opacity: .7;
-animation: skeleton-loading 1s linear infinite alternate;
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
 }
 
-@keyframes skeleton-loading  {
-  0%{
-      background-color: hsl(200,20%,70%);
-      border-radius: 15px;
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+    border-radius: 15px;
   }
-  100%{
-      background-color: hsl(200,20%,95%);
-      border-radius: 8px;
+  100% {
+    background-color: hsl(200, 20%, 95%);
+    border-radius: 8px;
   }
 }
 
-.skeleton__img{
+.skeleton__img {
   width: 250px;
   height: 281px;
 }
-.skeleton__card_shortName{
+.skeleton__card_shortName {
   margin-top: 5px;
   height: 10px;
   width: 40%;
 }
-.skeleton__card_title{
+.skeleton__card_title {
   margin-top: 5px;
   height: 10px;
   width: 50%;
 }
-.skeleton__card_price{
+.skeleton__card_price {
   margin-top: 5px;
   height: 10px;
   width: 20%;

@@ -1,0 +1,9 @@
+query GetCustomerData {
+  customers(limit: 1) {
+    surname
+    phone
+    name
+    id
+    address
+  }
+}
