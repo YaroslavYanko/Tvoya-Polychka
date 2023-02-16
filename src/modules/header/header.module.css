@@ -46,6 +46,7 @@ video {
   color: #444444;
   letter-spacing: 0.5rem;
   background: rgb(255, 255, 255, 0.7);
+  transition: 1s all;
 }
 /* .header__inner_user {
   width: 200px;
