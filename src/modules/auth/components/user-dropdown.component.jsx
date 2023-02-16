@@ -5,7 +5,9 @@ import { useRef, useState } from "react";
 import { useOnClickOutside } from "@app/common/hooks/use-on-click-outside.hook";
 import { isLoggedInReactive } from "../store/reactive-vars";
 
-export const UserDropdown = () => {
+import { HiOutlineUserCircle } from "react-icons/hi";
+
+export const UserDropdown = ({mainPage}) => {
   const [isDropDownOpen, setDropDownOpen] = useState(false);
 
   const toggleDropDownState = () => setDropDownOpen((drop) => !drop);
@@ -25,8 +27,8 @@ export const UserDropdown = () => {
 
   return (
     <div className={styles.user__drop} ref={ref}>
-      <button onClick={toggleDropDownState} className={styles.user__drop_icon}>
-        <img src={accaunt} alt="userLogin" />
+      <button onClick={toggleDropDownState} className={styles.user__drop_icon}  style={{ color: mainPage ? '#444444' : "white" }}>
+     <HiOutlineUserCircle/>
       </button>
       {isDropDownOpen && (
         <div className={styles.user__drop_menu}>

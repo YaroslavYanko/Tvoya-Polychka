@@ -10,25 +10,6 @@
   {
     "id": 3,
     "img": "./main_slider/3.jpg"
-  },
-  {
-    "id": 4,
-    "img": "./main_slider/4.jpg"
-  },
-  {
-    "id": 5,
-    "img": "./main_slider/5.jpg"
-  },
-  {
-    "id": 6,
-    "img": "./main_slider/6.jpg"
-  },
-  {
-    "id": 7,
-    "img": "./main_slider/7.jpg"
-  },
-  {
-    "id": 8,
-    "img": "./main_slider/8.jpg"
   }
+
 ]

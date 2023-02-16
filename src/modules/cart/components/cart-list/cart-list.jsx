@@ -16,6 +16,7 @@ export const CartList = () => {
 
   return (  
       <div className={styles.cart__sidebar_basket}>
+          <div className={styles.checkout__price}><span>Загальна сума: {cartSum} грн</span></div>
           <div className={styles.cart__basket_items}>
             {(data || previousData)?.goods.map((item) => (
               <CartItem

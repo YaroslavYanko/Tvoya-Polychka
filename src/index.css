@@ -19,7 +19,7 @@ h4,
 h5 {
   list-style: none;
   text-decoration: none;
-  color: #202429;
+  color: #444444;
 }
 .container{
   max-width: 1300px;
@@ -32,10 +32,11 @@ button {
   height: 40px;
   font-size: 16px;
   font-weight: 800;
-  border: solid 2px #202429;
+  border: solid 2px #444444;
   transition: 0.5s all ease;
-  background-color: #202429;
+  background-color: #444444;
   color: white;
+  text-transform: uppercase;
 }
 textarea{
   resize: none;

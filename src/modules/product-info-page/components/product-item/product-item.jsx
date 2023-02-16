@@ -11,7 +11,7 @@ export const ProductItem = ({ title, image, price, description }) => {
       <div className={style.product__item_title}>
         <AdvancedImage cldImg={imageCloud} />
         <div className={style.item_title}>
-          <h3>{title}</h3>
+          <h1>{title}</h1>
           <InputNumber />
 
           <button >до кошика</button>

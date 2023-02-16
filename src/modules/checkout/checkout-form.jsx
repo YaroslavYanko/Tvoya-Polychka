@@ -31,7 +31,7 @@ const validate = yup.object({
 
 const options = [
   { label: "Оплата при отриманні", value: Payment_Types_Enum.Cash },
-  { label: "Оплата через сайт", value:  Payment_Types_Enum.Online },
+  // { label: "Оплата через сайт", value:  Payment_Types_Enum.Online },
   { label: "Оплата по реквізитах", value:  Payment_Types_Enum.Card },
 ];
 

@@ -14,8 +14,8 @@ const ProductsItem = ({ shortName, title, image, price,id }) => {
       <Link to={`/products/${id}`} className={styles.product__card}>   
         <AdvancedImage cldImg={imageCloud} />
         <div className={styles.product__card_description}>
-          <h5 className={styles.product__card_shortName}>{shortName}</h5>
-          <h4 className={styles.product__card_title}>{title}</h4>
+          <h3 className={styles.product__card_shortName}>{shortName}</h3>
+          {/* <h4 className={styles.product__card_title}>{title}</h4> */}
           <span className={styles.product__card_price}>{price} грн</span>
         </div>
       </Link>

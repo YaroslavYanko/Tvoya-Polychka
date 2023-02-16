@@ -11,12 +11,12 @@ const MainSlider = () => {
   const settings = {
     // dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 2,
+    speed: 1000,
+    slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
     // cssEase: "linear",
     responsive: [
       {

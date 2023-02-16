@@ -23,14 +23,20 @@ export const CartSidebar = () => {
 
   //Закрити при при кліку по windowElement
   useOnClickOutside(cartRef, (e) => {
-    if (e.target.alt !== "basket_header") {
-      if (isOpened) {
-        closeCart();
-      }
+    const path = e.composedPath();
+
+
+    const isCartButton = path.find(
+
+      (el) => el.id === 'basket_header'
+    );
+    if (!isCartButton && isOpened) {
+      closeCart();
     }
   });
 
   const handleCheckoutClick = () => {
+
     closeCart();
   };
 
@@ -46,6 +52,7 @@ export const CartSidebar = () => {
         !isOpened ? styles.cart__sidebar_show : null
       }`}
     >
+  
       <div className={styles.cart__sidebar_title}>
         <span>Кошик</span>
         <button className={styles.sidebar__btn_close} onClick={closeCart}>
@@ -60,8 +67,7 @@ export const CartSidebar = () => {
       ) : (
         <CartList />
       )}
-      <div className={styles.cart__general_price}>
-        <span>Загальна сума: {cartSum} грн</span>
+      <div className={styles.cart__sidebar_btn}>
 
         <Link to="/checkout">
           <button

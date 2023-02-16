@@ -1,5 +1,5 @@
-import HeaderContainer from "./common/components/header/HeaderContainer";
-import MobileMenu from "./common/components/header/MobileMenu/MobileMenu";
+
+// import MobileMenu from "./common/components/header/MobileMenu/MobileMenu";
 import Footer from "./modules/main-page/components/Footer/Footer";
 import { MainPage } from "./modules/main-page/pages/main.page";
 import { BrowserRouter, Routes } from "react-router-dom";
@@ -15,6 +15,8 @@ import { PrivateRoute } from "./common/components/private-route/private-route.co
 import { CheckoutPage } from "./modules/checkout/pages/checkout.page";
 import ThankYouPage from "./modules/checkout/pages/thank-you.page";
 import { ProductInfoPage } from "./modules/product-info-page/page/product-info-page";
+import HeaderContainer from "./modules/header/HeaderContainer";
+
 
 function App() {
   const { data, loading } = useGetCategoriesQuery();
@@ -52,7 +54,7 @@ function App() {
           <Route path="/checkout/thakns-you" element={<ThankYouPage />} />
         </Routes>
         <Footer />
-        <MobileMenu />
+        {/* <MobileMenu /> */}
       </div>
     </BrowserRouter>
   );

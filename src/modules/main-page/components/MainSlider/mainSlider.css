@@ -1,7 +1,7 @@
 .sliderWrapper{
     width: 100%;
-    margin: 15px auto;
     overflow: hidden;
+    height: 750px;
 }
 .card{
     overflow: hidden;
@@ -10,4 +10,20 @@
 .card>img{
   width: 100%;
   object-fit: cover;
+  /* background-position: top; */
+  block-size: 750px;
+  filter: brightness(0.5);
+  transition: 0.5s all ease;
+  animation-name: zoom;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate ;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.6);
+  }
 }

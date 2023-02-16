@@ -9,7 +9,7 @@
   display: flex;
 }
 .product__item_title img {
-  width: 200px;
+  height: 450px;
 }
 .product__item_description {
   white-space: break-spaces;
@@ -47,5 +47,5 @@
   }
 
 .product__item_title >div{
-    padding: 100px;
+    padding: 20px;
 }

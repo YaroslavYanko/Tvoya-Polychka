@@ -1,7 +1,5 @@
 
-.main__page_wrapper{
-  margin-top: 100px;
-}
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -17,16 +15,18 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 50px;
-
+  justify-content: center;
 }
 .products__title {
   width: 100%;
 }
 .products__title > h2 {
   font-size: 36px;
+  position: relative;
 }
+
 .wrapper__product {
-  width: 280px;
+  width: 325px;
   display: flex;
 }
 .product__card {

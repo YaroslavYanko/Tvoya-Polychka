@@ -1,12 +1,12 @@
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   padding: 150px;
 }
 .form__page_login {
-  width: 800px;
+
   display: flex;
   justify-content: center;
 }
@@ -49,5 +49,16 @@ form {
   background:none;
   border: none;
   cursor: pointer;
-  background-color: white;
+  font-size: 30px;
+  transition: 1s all;
+}
+
+
+@media screen and (max-width: 600px) {
+  .input__login {
+    padding: 0px 20px;
+  }
+  .form__button{
+    padding: 0 20px;
+  }
 }
