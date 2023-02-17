@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f7f8fa;
+  margin-top: auto;
+
+}
+.container {
+  width: 1300px;
+  padding: 35px 0px 100px;
+}
+.footer__info nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__menu {
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: 0.5s ease all;
+}
+.footer__menu:hover {
+  color: rgb(138, 138, 138);
+}
+
+@media screen and (max-width: 600px) {
+  .footer__info nav ul {
+    flex-direction: column;
+  }
+  .footer__info nav ul li {
+    padding-top: 5px;
+  }
+  .footer{
+    margin-top: 35px;
+  }
+}
