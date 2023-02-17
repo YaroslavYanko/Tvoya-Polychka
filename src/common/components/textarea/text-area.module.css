@@ -19,6 +19,12 @@ textarea:focus {
 
 .wrapper__textarea > label {
   font-size: 16px;
-  color: #202429;
+  color: #444444;
   font-weight: 700;
+}
+
+@media screen and (max-width: 600px){
+  .wrapper__textarea{
+    padding-left: 20px;
+  }
 }

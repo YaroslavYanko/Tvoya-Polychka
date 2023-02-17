@@ -1,4 +1,6 @@
 import { forwardRef, useId } from "react";
+import { CiSquarePlus , CiSquareMinus } from "react-icons/ci";
+
 import styles from "./input-number.module.css";
 
 export const InputNumber = forwardRef(
@@ -34,10 +36,11 @@ export const InputNumber = forwardRef(
 
         <div className={styles.input__login_value}>
           <button
+             style={{marginRight: '5px'}}
             className={styles.input__number_btn}
             onClick={onHandlerDecrement}
           >
-            -
+           <CiSquareMinus/>
           </button>
           <input
             className={styles.input__phone}
@@ -52,7 +55,7 @@ export const InputNumber = forwardRef(
             className={`${styles.input__number_btn} ${styles.btn__plus}`}
             onClick={onHandlerIncrement}
           >
-            +
+            <CiSquarePlus/>
           </button>
         </div>
 
