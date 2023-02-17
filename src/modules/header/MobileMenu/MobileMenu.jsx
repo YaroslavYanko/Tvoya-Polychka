@@ -5,6 +5,7 @@ import styles from "./MobileMenu.module.css";
 import { RiCloseLine } from "react-icons/ri";
 import { useReactiveVar } from "@apollo/client";
 import { closeMobileMenu, mobileMenuOpenedState } from "./store/mobile-state";
+import { Link } from "react-router-dom";
 
 const MobileMenu = () => {
   const isOpened = useReactiveVar(mobileMenuOpenedState);
@@ -15,19 +16,19 @@ const MobileMenu = () => {
       <nav className={styles.mobile__menu_nav}>
         <ul>
           <li>
-            <a href={"/"}>Головна</a>
+            <Link onClick={closeMobileMenu} to="/">Головна</Link>
           </li>
           <li>
-            <a href={"/"}>Магазин</a>
+            <Link onClick={closeMobileMenu} to="/products">Магазин</Link>
           </li>
           <li>
-            <a href={"/category"}>Доставка</a>
+            <Link to="/">Доставка</Link>
           </li>
           <li>
-            <a href={"/like"}>Новинки</a>
+            <Link to="/">Новинки</Link>
           </li>
           <li>
-            <a href={"/profile"}>Блог</a>
+            <Link to="/">Блог</Link>
           </li>
         </ul>
       </nav>

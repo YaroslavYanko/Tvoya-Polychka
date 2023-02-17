@@ -37,16 +37,18 @@ video {
 .header__login {
   color: white;
 }
+.header__login a {
+  transition: 1s all;
+  font-size: 1.3rem;
+}
 .header__inner_logo > a > h3 {
   color: orange;
   font-family: "Bad Script", cursive;
-  /* font-family: 'Dancing Script', cursive; */
-  /* font-family: 'Lato', sans-serif; */
+  transition: 1s all;
   font-size: 4rem;
   color: #444444;
   letter-spacing: 0.5rem;
-  background: rgb(255, 255, 255, 0.7);
-  transition: 1s all;
+  /* background: rgb(255, 255, 255, 0.7); */
 }
 /* .header__inner_user {
   width: 200px;
@@ -201,6 +203,12 @@ video {
   font-size: 1.3rem;
   padding: 10px;
 }
+.user__menu{
+  display: flex;
+  width: 140px;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .mobile__menu_btn{
   display: none;
@@ -218,11 +226,24 @@ video {
 }
 
 @media screen and (max-width: 600px) {
+  .header__menu nav {
+   width: auto;
+   display: flex;
+   justify-content: center;
+   position: absolute;
+   top: 15px;
+   right: 0px;
+  }
+ 
+
+  .header__menu_nav{
+    display: none;
+  }
   .mobile__menu_btn{
     display: block;
     font-size: 35px;
-    margin-left: auto;
-    margin-right: 15px;
+    margin-right: auto;
+    margin-left: 15px;
     margin-top: 15px;
   }
   .header__inner_logo > a > h3 {

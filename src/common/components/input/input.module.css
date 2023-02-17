@@ -28,6 +28,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .input__login{
+    width: 380px;
+  }
   .input__login {
     padding: 0px 20px;
   }

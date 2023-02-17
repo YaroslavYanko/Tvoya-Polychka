@@ -6,7 +6,7 @@ import { CartSidebar } from "@app/modules/cart/components/cart-sidebar";
 import { toggleCart } from "@app/modules/cart/store/cart-opened-state";
 
 import { AiOutlineShopping } from "react-icons/ai";
-import { RiMenu3Line } from "react-icons/ri";
+import { RiMenu2Fill } from "react-icons/ri";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { openMobileMenu } from "../MobileMenu/store/mobile-state";
 
@@ -16,13 +16,13 @@ const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
   const loginIn = location.pathname !== "/login";
   const mainPage = location.pathname !== "/";
 
-  const mobileBtn = () => {};
+
 
   return (
     <header style={{ position: mainPage ? "static" : "absolute" }}>
       <MobileMenu />
       <div>
-        <RiMenu3Line
+        <RiMenu2Fill
           onClick={openMobileMenu}
           className={styles.mobile__menu_btn}
           style={{ color: mainPage ? "#444444" : "white" }}
@@ -83,13 +83,6 @@ const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
                 Новинки
               </Link>
             </li>
-            {/* <li>
-              <Link className={styles.header__category} to="/">
-                Знижки
-                <span className={styles.header__category_discount}> %</span>
-              </Link>
-              
-            </li> */}
             <li>
               <Link
                 className={`${styles.header__category} ${
@@ -101,8 +94,14 @@ const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
               </Link>
             </li>
 
-            <li>
-              <Link to="#" className={styles.btn__basket_link}>
+
+
+
+          </ul>
+
+
+          <div className={styles.user__menu}>
+          <Link to="#" className={styles.btn__basket_link}>
                 <button
                   className={`${styles.btn__basket} ${
                     mainPage && styles.header__category_color
@@ -113,7 +112,7 @@ const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
                   <AiOutlineShopping />
                 </button>
               </Link>
-            </li>
+       
 
             {loginIn && (
               <div
@@ -132,7 +131,7 @@ const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
                 )}
               </div>
             )}
-          </ul>
+          </div>
         </nav>
       </div>
     </header>
