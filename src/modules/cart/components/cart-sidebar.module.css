@@ -129,6 +129,7 @@
   .cart__sidebar{
     width: auto;
     padding: 0;
+    width: 100%;
   }
   .cart__sidebar_title{
     padding: 10px;
