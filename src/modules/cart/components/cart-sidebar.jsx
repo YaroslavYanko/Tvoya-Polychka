@@ -7,7 +7,10 @@ import { cartOpenedState, closeCart } from "../store/cart-opened-state";
 import { cartState } from "../store/cart-state";
 import { CartList } from "./cart-list/cart-list";
 
+import { RiCloseFill } from "react-icons/ri";
+
 import styles from "./cart-sidebar.module.css";
+
 
 export const CartSidebar = () => {
   const isOpened = useReactiveVar(cartOpenedState);
@@ -56,7 +59,7 @@ export const CartSidebar = () => {
       <div className={styles.cart__sidebar_title}>
         <span>Кошик</span>
         <button className={styles.sidebar__btn_close} onClick={closeCart}>
-          x
+          <RiCloseFill/>
         </button>
       </div>
       {Object.keys(cartItems).length === 0 ? (

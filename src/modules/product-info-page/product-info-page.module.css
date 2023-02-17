@@ -49,3 +49,27 @@
 .product__item_title >div{
     padding: 20px;
 }
+
+@media screen and (max-width: 600px){
+  .wrapper__product_page {
+    width: 100%;
+  }
+  .product__item_title{
+    flex-direction: column;
+  }
+  .product__item_title >div{
+    padding: 6px;
+  }
+  .product__item_title >div h1{
+    margin-bottom: 20px;
+  }
+  .wrapper_product_item{
+    padding: 0;
+  }
+  .product__item_title img{
+    height: auto;
+  }
+  .product__item_description {
+    padding: 50px 6px
+  }
+}   

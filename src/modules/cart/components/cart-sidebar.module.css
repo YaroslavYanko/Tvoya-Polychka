@@ -13,18 +13,18 @@
   transition: all 0.5s ease;
   transform: translateX(0%);
   top: 0px;
-
 }
 .cart__sidebar_show {
   transition: all 0.5s ease;
   transform: translateX(130%);
 }
-.cart__box_image{
+.cart__box_image {
   width: 200px;
 }
 .cart__sidebar_title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .cart__sidebar_basket {
   border-radius: 10px;
@@ -48,12 +48,11 @@
 .cart__item {
   width: 100%;
   padding: 10px;
-  border-bottom: solid #202429 1px;
+  border-bottom: solid #444444 1px;
 }
 .cart__item_info {
   display: flex;
   align-items: center;
-
 }
 .cart__item_image {
   border-radius: 10px;
@@ -65,9 +64,9 @@
   padding-left: 15px;
   width: 100%;
 }
-.cart__info span{
+.cart__info span {
   padding-bottom: 10px;
-  color: #202429;
+  color: #444444;
   font-weight: 700;
 }
 .cart__sidebar_btn {
@@ -76,7 +75,7 @@
   padding-bottom: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #202429;
+  color: #444444;
 }
 
 .cart_sidebar_order {
@@ -89,35 +88,61 @@
   height: 550px;
   width: 100%;
 }
-.sidebar__btn_close{
+.sidebar__btn_close {
+  font-size: 2rem;
+  color: #444444;
+  background: none;
   width: 40px;
-  text-transform: uppercase;
-  color: white;
+  border: none;
 }
-.cart__sidebar_title span{
+.cart__sidebar_title span {
   font-weight: bold;
   font-size: 24px;
-  color: #202429;
+  color: #444444;
 }
-.cart__btn_delete{
-  font-weight: 600;
-    width: 95px;
-    height: 28px;
-    font-size: 15px;
+.cart__btn_delete {
 
+  font-size: 1.4rem;
+  color: #444444;
+  background: none;
+  border: none;
+  width: 50px;
 }
-.cart__item_btn{
+.cart__item_btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.cart__item input{
-  border-color: #202429;
+.cart__item input {
+  border-color: #444444;
 }
 
-.checkout__price{
+.checkout__price {
   width: 100%;
-    font-weight: bold;
-    padding-bottom: 50px;
-    font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 50px;
+  font-size: 20px;
+  color: #444444;
+}
+
+@media screen and (max-width: 600px){
+  .cart__sidebar{
+    width: auto;
+    padding: 0;
+  }
+  .cart__sidebar_title{
+    padding: 10px;
+  }
+  .cart__sidebar_basket{
+   margin: 0;
+   margin-top: 80px;
+  }
+  .cart__sidebar_btn{
+    padding: 0;
+    position: absolute;
+    top: 55px;
+  }
+  .cart__item{
+    padding: 0;
+  }
 }

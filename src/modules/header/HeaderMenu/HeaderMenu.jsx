@@ -7,8 +7,10 @@ import { toggleCart } from "@app/modules/cart/store/cart-opened-state";
 
 import { AiOutlineShopping } from "react-icons/ai";
 import { RiMenu2Fill } from "react-icons/ri";
+import { RxEnter } from "react-icons/rx";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { openMobileMenu } from "../MobileMenu/store/mobile-state";
+
 
 const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
   const location = useLocation();
@@ -126,7 +128,7 @@ const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
                     to="/login"
                     style={{ color: mainPage ? "#444444" : "white" }}
                   >
-                    Вхід
+                    <RxEnter/>
                   </Link>
                 )}
               </div>

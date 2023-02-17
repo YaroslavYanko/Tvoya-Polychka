@@ -11,3 +11,15 @@
     padding: 70px;
     align-items: flex-start;
 }
+@media screen and (max-width: 600px){
+    .container{
+        width: 100%;
+    }
+    .wrapper__checkout_form{
+        flex-direction: column;
+        padding: 0;
+    }
+    .wrapper__checkout_form form{
+        width: 100%;
+    }
+}
