@@ -1,10 +1,13 @@
 query GetProductsItems($productsIds: [uuid!]!) {
-  goods(where: {id: {_in: $productsIds}}) {
+  goods(where: { id: { _in: $productsIds } }) {
+    category_id
+    characteristics
+    description
+    id
     image
+    ingredients
     price
     shortName
     title
-    description
-    id
   }
 }

@@ -23,8 +23,9 @@ textarea:focus {
   font-weight: 700;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
   .wrapper__textarea{
-    padding-left: 20px;
+    width: 90%;
   }
+
 }

@@ -1,4 +1,11 @@
-.container {
-    max-width: 1050px;
-    background-color: aquamarine;
+.wrapper__profile_orders{
+    width: 1300px;
+    padding: 50px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1350px){
+    .wrapper__profile_orders{
+        width: 100%;
+        
+    }
 }

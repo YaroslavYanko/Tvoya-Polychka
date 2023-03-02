@@ -720,9 +720,11 @@ export type Goods = {
   /** An object relationship */
   category?: Maybe<Categories>;
   category_id: Scalars['uuid'];
+  characteristics?: Maybe<Scalars['String']>;
   description: Scalars['String'];
   id: Scalars['uuid'];
   image: Scalars['String'];
+  ingredients?: Maybe<Scalars['String']>;
   price: Scalars['numeric'];
   shortName: Scalars['String'];
   title: Scalars['String'];
@@ -809,9 +811,11 @@ export type Goods_Bool_Exp = {
   _or?: InputMaybe<Array<Goods_Bool_Exp>>;
   category?: InputMaybe<Categories_Bool_Exp>;
   category_id?: InputMaybe<Uuid_Comparison_Exp>;
+  characteristics?: InputMaybe<String_Comparison_Exp>;
   description?: InputMaybe<String_Comparison_Exp>;
   id?: InputMaybe<Uuid_Comparison_Exp>;
   image?: InputMaybe<String_Comparison_Exp>;
+  ingredients?: InputMaybe<String_Comparison_Exp>;
   price?: InputMaybe<Numeric_Comparison_Exp>;
   shortName?: InputMaybe<String_Comparison_Exp>;
   title?: InputMaybe<String_Comparison_Exp>;
@@ -832,9 +836,11 @@ export type Goods_Inc_Input = {
 export type Goods_Insert_Input = {
   category?: InputMaybe<Categories_Obj_Rel_Insert_Input>;
   category_id?: InputMaybe<Scalars['uuid']>;
+  characteristics?: InputMaybe<Scalars['String']>;
   description?: InputMaybe<Scalars['String']>;
   id?: InputMaybe<Scalars['uuid']>;
   image?: InputMaybe<Scalars['String']>;
+  ingredients?: InputMaybe<Scalars['String']>;
   price?: InputMaybe<Scalars['numeric']>;
   shortName?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
@@ -844,9 +850,11 @@ export type Goods_Insert_Input = {
 export type Goods_Max_Fields = {
   __typename?: 'goods_max_fields';
   category_id?: Maybe<Scalars['uuid']>;
+  characteristics?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   id?: Maybe<Scalars['uuid']>;
   image?: Maybe<Scalars['String']>;
+  ingredients?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['numeric']>;
   shortName?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
@@ -855,9 +863,11 @@ export type Goods_Max_Fields = {
 /** order by max() on columns of table "goods" */
 export type Goods_Max_Order_By = {
   category_id?: InputMaybe<Order_By>;
+  characteristics?: InputMaybe<Order_By>;
   description?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   image?: InputMaybe<Order_By>;
+  ingredients?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
   shortName?: InputMaybe<Order_By>;
   title?: InputMaybe<Order_By>;
@@ -867,9 +877,11 @@ export type Goods_Max_Order_By = {
 export type Goods_Min_Fields = {
   __typename?: 'goods_min_fields';
   category_id?: Maybe<Scalars['uuid']>;
+  characteristics?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   id?: Maybe<Scalars['uuid']>;
   image?: Maybe<Scalars['String']>;
+  ingredients?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['numeric']>;
   shortName?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
@@ -878,9 +890,11 @@ export type Goods_Min_Fields = {
 /** order by min() on columns of table "goods" */
 export type Goods_Min_Order_By = {
   category_id?: InputMaybe<Order_By>;
+  characteristics?: InputMaybe<Order_By>;
   description?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   image?: InputMaybe<Order_By>;
+  ingredients?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
   shortName?: InputMaybe<Order_By>;
   title?: InputMaybe<Order_By>;
@@ -913,9 +927,11 @@ export type Goods_On_Conflict = {
 export type Goods_Order_By = {
   category?: InputMaybe<Categories_Order_By>;
   category_id?: InputMaybe<Order_By>;
+  characteristics?: InputMaybe<Order_By>;
   description?: InputMaybe<Order_By>;
   id?: InputMaybe<Order_By>;
   image?: InputMaybe<Order_By>;
+  ingredients?: InputMaybe<Order_By>;
   price?: InputMaybe<Order_By>;
   shortName?: InputMaybe<Order_By>;
   title?: InputMaybe<Order_By>;
@@ -931,11 +947,15 @@ export enum Goods_Select_Column {
   /** column name */
   CategoryId = 'category_id',
   /** column name */
+  Characteristics = 'characteristics',
+  /** column name */
   Description = 'description',
   /** column name */
   Id = 'id',
   /** column name */
   Image = 'image',
+  /** column name */
+  Ingredients = 'ingredients',
   /** column name */
   Price = 'price',
   /** column name */
@@ -947,9 +967,11 @@ export enum Goods_Select_Column {
 /** input type for updating data in table "goods" */
 export type Goods_Set_Input = {
   category_id?: InputMaybe<Scalars['uuid']>;
+  characteristics?: InputMaybe<Scalars['String']>;
   description?: InputMaybe<Scalars['String']>;
   id?: InputMaybe<Scalars['uuid']>;
   image?: InputMaybe<Scalars['String']>;
+  ingredients?: InputMaybe<Scalars['String']>;
   price?: InputMaybe<Scalars['numeric']>;
   shortName?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
@@ -999,9 +1021,11 @@ export type Goods_Stream_Cursor_Input = {
 /** Initial value of the column from where the streaming should start */
 export type Goods_Stream_Cursor_Value_Input = {
   category_id?: InputMaybe<Scalars['uuid']>;
+  characteristics?: InputMaybe<Scalars['String']>;
   description?: InputMaybe<Scalars['String']>;
   id?: InputMaybe<Scalars['uuid']>;
   image?: InputMaybe<Scalars['String']>;
+  ingredients?: InputMaybe<Scalars['String']>;
   price?: InputMaybe<Scalars['numeric']>;
   shortName?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
@@ -1023,11 +1047,15 @@ export enum Goods_Update_Column {
   /** column name */
   CategoryId = 'category_id',
   /** column name */
+  Characteristics = 'characteristics',
+  /** column name */
   Description = 'description',
   /** column name */
   Id = 'id',
   /** column name */
   Image = 'image',
+  /** column name */
+  Ingredients = 'ingredients',
   /** column name */
   Price = 'price',
   /** column name */
@@ -1871,7 +1899,7 @@ export enum Order_Status_Enum {
   Canceled = 'CANCELED',
   /** Виданий клієнту */
   Delivered = 'DELIVERED',
-  /** Відправлений */
+  /** Готовий до видачі */
   Done = 'DONE',
   /** Готується */
   InProgress = 'IN_PROGRESS',
@@ -1987,7 +2015,7 @@ export type Orders = {
   comment?: Maybe<Scalars['String']>;
   created_at: Scalars['timestamptz'];
   /** An object relationship */
-  custumer?: Maybe<Customers>;
+  customer?: Maybe<Customers>;
   id: Scalars['uuid'];
   /** An array relationship */
   order_items: Array<Orders_Products>;
@@ -2077,7 +2105,7 @@ export type Orders_Bool_Exp = {
   client_surname?: InputMaybe<String_Comparison_Exp>;
   comment?: InputMaybe<String_Comparison_Exp>;
   created_at?: InputMaybe<Timestamptz_Comparison_Exp>;
-  custumer?: InputMaybe<Customers_Bool_Exp>;
+  customer?: InputMaybe<Customers_Bool_Exp>;
   id?: InputMaybe<Uuid_Comparison_Exp>;
   order_items?: InputMaybe<Orders_Products_Bool_Exp>;
   order_items_aggregate?: InputMaybe<Orders_Products_Aggregate_Bool_Exp>;
@@ -2100,7 +2128,7 @@ export type Orders_Insert_Input = {
   client_surname?: InputMaybe<Scalars['String']>;
   comment?: InputMaybe<Scalars['String']>;
   created_at?: InputMaybe<Scalars['timestamptz']>;
-  custumer?: InputMaybe<Customers_Obj_Rel_Insert_Input>;
+  customer?: InputMaybe<Customers_Obj_Rel_Insert_Input>;
   id?: InputMaybe<Scalars['uuid']>;
   order_items?: InputMaybe<Orders_Products_Arr_Rel_Insert_Input>;
   payment_type?: InputMaybe<Payment_Types_Enum>;
@@ -2184,7 +2212,7 @@ export type Orders_Order_By = {
   client_surname?: InputMaybe<Order_By>;
   comment?: InputMaybe<Order_By>;
   created_at?: InputMaybe<Order_By>;
-  custumer?: InputMaybe<Customers_Order_By>;
+  customer?: InputMaybe<Customers_Order_By>;
   id?: InputMaybe<Order_By>;
   order_items_aggregate?: InputMaybe<Orders_Products_Aggregate_Order_By>;
   payment_type?: InputMaybe<Order_By>;
@@ -3643,14 +3671,14 @@ export type GetCustomerOrdersQuery = { __typename?: 'query_root', orders: Array<
 export type GetGoodsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetGoodsQuery = { __typename?: 'query_root', categories: Array<{ __typename?: 'categories', id: any, slug: string, title: string, goods_items: Array<{ __typename?: 'goods', id: any, image: string, description: string, price: any, shortName: string, title: string, category_id: any }> }> };
+export type GetGoodsQuery = { __typename?: 'query_root', categories: Array<{ __typename?: 'categories', id: any, slug: string, title: string, goods_items: Array<{ __typename?: 'goods', category_id: any, description: string, id: any, image: string, price: any, shortName: string, title: string, ingredients?: string | null, characteristics?: string | null }> }> };
 
 export type GetProductsItemsQueryVariables = Exact<{
   productsIds: Array<Scalars['uuid']> | Scalars['uuid'];
 }>;
 
 
-export type GetProductsItemsQuery = { __typename?: 'query_root', goods: Array<{ __typename?: 'goods', image: string, price: any, shortName: string, title: string, description: string, id: any }> };
+export type GetProductsItemsQuery = { __typename?: 'query_root', goods: Array<{ __typename?: 'goods', category_id: any, characteristics?: string | null, description: string, id: any, image: string, ingredients?: string | null, price: any, shortName: string, title: string }> };
 
 export type GetSettingsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -3907,13 +3935,15 @@ export const GetGoodsDocument = gql`
     slug
     title
     goods_items {
+      category_id
+      description
       id
       image
-      description
       price
       shortName
       title
-      category_id
+      ingredients
+      characteristics
     }
   }
 }
@@ -3948,12 +3978,15 @@ export type GetGoodsQueryResult = Apollo.QueryResult<GetGoodsQuery, GetGoodsQuer
 export const GetProductsItemsDocument = gql`
     query GetProductsItems($productsIds: [uuid!]!) {
   goods(where: {id: {_in: $productsIds}}) {
+    category_id
+    characteristics
+    description
+    id
     image
+    ingredients
     price
     shortName
     title
-    description
-    id
   }
 }
     `;

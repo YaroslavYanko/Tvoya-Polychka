@@ -1,5 +1,5 @@
 import { forwardRef, useId } from "react";
-import { CiSquarePlus , CiSquareMinus } from "react-icons/ci";
+import { AiOutlineMinusCircle,AiOutlinePlusCircle } from  "react-icons/ai";
 
 import styles from "./input-number.module.css";
 
@@ -32,7 +32,6 @@ export const InputNumber = forwardRef(
 
     return (
       <div className={styles.input__login}>
-        <label htmlFor={inputId}>Кількість</label>
 
         <div className={styles.input__login_value}>
           <button
@@ -40,7 +39,7 @@ export const InputNumber = forwardRef(
             className={styles.input__number_btn}
             onClick={onHandlerDecrement}
           >
-           <CiSquareMinus/>
+           <AiOutlineMinusCircle/>
           </button>
           <input
             className={styles.input__phone}
@@ -55,17 +54,10 @@ export const InputNumber = forwardRef(
             className={`${styles.input__number_btn} ${styles.btn__plus}`}
             onClick={onHandlerIncrement}
           >
-            <CiSquarePlus/>
+            <AiOutlinePlusCircle/>
           </button>
         </div>
 
-        <div className={styles.input__login_error}>
-          <span
-            dangerouslySetInnerHTML={{
-              __html: error || "&nbsp;",
-            }}
-          />
-        </div>
       </div>
     );
   }

@@ -6,7 +6,7 @@ export const RadioGroup = forwardRef(
   ({ options, name, onChange, value, label }, ref) => {
     return (
       <div ref={ref} className={styles.wrapper__radio_btn}>
-        <span>{label}</span>
+      
         {options.map((option) => (
           <RadioInput
             {...option}
