@@ -2,10 +2,16 @@ import { useGetGoodsQuery } from "@app/core/types";
 import { ProductsListLoading } from "@app/modules/main-page/components/products-list-loading/products-list-loading";
 import ProductsListGeneral from "../components/products-list-general/products-list-general";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
+import { CategorySelector } from "../components/category-selector/category-selector";
+import styles from "./products.page.module.css";
+import { LineImages } from "@app/common/components/line-images/line-images";
 
-export const ProductsPage = ({showAllProducts}) => {
+export const ProductsPage = () => {
   const { data, loading, error } = useGetGoodsQuery();
- 
+
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
   if (error) {
     return <h3>Ого , здається сталась помилка , зайдіт пізніше</h3>;
   }
@@ -16,23 +22,35 @@ export const ProductsPage = ({showAllProducts}) => {
     return <h3>Хм , мабуть товари закінчились , зайдіт пізніше</h3>;
   }
 
-  const products = [];
+  const allProducts = data.categories.reduce((acc, category) => {
+    acc.push(...category.goods_items);
+    return acc;
+  }, []);
 
+  const products =
+    selectedCategory === "all"
+      ? allProducts
+      : data.categories.find((category) => category.slug === selectedCategory)
+          .goods_items;
 
-  data.categories.map((categori) => {
-    return categori.goods_items.map((product) => {
-      products.push(product);
-    });
-  });
-
+  const handleCategorySelect = (categorySlug) => {
+    console.log(categorySlug);
+    setSelectedCategory(categorySlug);
+  };
 
   return (
-    <>
-      <Helmet>
-        <title>Продукти</title>
-      </Helmet>
-      <ProductsListGeneral products={products} />
+    <div>
+      <LineImages />
 
-    </>
+      <div className={styles.products__page}>
+        <Helmet>
+          <title>Косметика</title>
+        </Helmet>
+
+        <CategorySelector onCategorySelect={handleCategorySelect} />
+
+        <ProductsListGeneral products={products} />
+      </div>
+    </div>
   );
 };

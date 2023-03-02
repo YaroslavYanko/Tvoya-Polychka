@@ -1,6 +1,5 @@
 .wrapper__product{
     width: 325px;
-    height: 380px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -9,7 +8,7 @@
     margin-top: 80px;
 }
 .product__card_description{
-    height: 75px;
+
     padding: 10px;
 }
 .product__card_shortName{
@@ -31,3 +30,19 @@
 .product__card img{
     height: 250px;
 }
+
+@media screen and (max-width: 1600px){
+    .wrapper__product{
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .wrapper__product{
+        width: 200px;
+    }
+    .product__card img{
+        height: 150px;
+    }
+  }

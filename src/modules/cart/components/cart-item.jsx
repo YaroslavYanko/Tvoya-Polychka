@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./cart-sidebar.module.css";
 import { cloudinary } from "@app/core/cloudinary";
 import { AdvancedImage } from "@cloudinary/react";
@@ -9,7 +8,7 @@ import { BsTrash } from "react-icons/bs";
 
 
 export const CartItem = ({ image, price, shortName, count, productItemId }) => {
-  // const image = "goods/goods-1671824211";
+
   const imageCloud = cloudinary.image(image);
 
   const handleChangeAmount = (amount) => {

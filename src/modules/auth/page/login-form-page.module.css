@@ -52,9 +52,13 @@ form {
   font-size: 30px;
   transition: 1s all;
 }
+@media (min-width: 769px) and (max-width: 1024px){
+  form{
+    width: 90%;
+  }
+}
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .input__login {
     padding: 0px 20px;
   }

@@ -1,11 +1,9 @@
-
 // import MobileMenu from "./common/components/header/MobileMenu/MobileMenu";
 import Footer from "./modules/main-page/components/Footer/Footer";
 import { MainPage } from "./modules/main-page/pages/main.page";
 import { BrowserRouter, Routes } from "react-router-dom";
-import { Route } from "react-router";
+import { Route, useLocation } from "react-router";
 import { ProductsPage } from "./modules/products-page/pages/products.page";
-import { useGetCategoriesQuery } from "./core/types";
 import { LoginFormPage } from "./modules/auth/page/login-form.page";
 import { Helmet } from "react-helmet";
 import { useEffect } from "react";
@@ -17,11 +15,7 @@ import ThankYouPage from "./modules/checkout/pages/thank-you.page";
 import { ProductInfoPage } from "./modules/product-info-page/page/product-info-page";
 import HeaderContainer from "./modules/header/HeaderContainer";
 
-
 function App() {
-  const { data, loading } = useGetCategoriesQuery();
-  const showAllProducts = null;
-
   useEffect(() => {
     const token = localStorage.getItem("jwt");
     isLoggedInReactive(Boolean(token));
@@ -36,11 +30,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginFormPage />} />
           <Route path="/" element={<MainPage />} />
-          <Route
-            path="/products"
-            showAllProducts={showAllProducts}
-            element={<ProductsPage />}
-          />
+          <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:id" element={<ProductInfoPage />} />
           <Route
             path="/profile"
@@ -54,7 +44,6 @@ function App() {
           <Route path="/checkout/thakns-you" element={<ThankYouPage />} />
         </Routes>
         <Footer />
-        {/* <MobileMenu /> */}
       </div>
     </BrowserRouter>
   );

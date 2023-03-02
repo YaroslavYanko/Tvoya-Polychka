@@ -40,7 +40,7 @@ video {
 .header__login a {
   display: flex;
   transition: 1s all;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 .header__inner_logo > a > h3 {
   color: orange;
@@ -80,7 +80,7 @@ video {
   justify-content: center;
 }
 .header__menu nav {
-  width: 1300px;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -203,14 +203,14 @@ video {
   font-size: 1.3rem;
   padding: 10px;
 }
-.user__menu{
+.user__menu {
   display: flex;
   width: 140px;
   justify-content: space-around;
   align-items: center;
 }
 
-.mobile__menu_btn{
+.mobile__menu_btn {
   display: none;
 }
 
@@ -225,27 +225,33 @@ video {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .header__menu nav {
-   width: auto;
-   display: flex;
-   justify-content: center;
-   position: absolute;
-   top: 15px;
-   right: 0px;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header__menu_nav {
+    width: 100%;
   }
- 
+}
 
-  .header__menu_nav{
+@media screen and (max-width: 768px) {
+  .header__menu nav {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+  }
+
+  .header__menu_nav {
     display: none;
   }
-  .mobile__menu_btn{
+  .wrapperMenuBtn{
+    padding: 15px;
+  }
+  .mobile__menu_btn {
     display: block;
     font-size: 35px;
-    margin-right: auto;
-    margin-left: 15px;
-    margin-top: 15px;
     transition: 1s all;
+
   }
   .header__inner_logo > a > h3 {
     font-family: "Bad Script", cursive;
@@ -278,6 +284,17 @@ video {
     width: 100%;
   }
   .usefulInformation__info_box {
+    width: 100%;
+  }
+  .fixedUserMenu {
+    position: fixed;
+    right: 0px;
+  }
+
+  .fixedMenuBtn {
+    position: fixed;
+    transition: all 0.3s ease;
+    background-color: #444444de;
     width: 100%;
   }
 }

@@ -16,9 +16,6 @@ const ProductsList = ({ item,title }) => {
           <ProductsItem {...item} key={`goods-${item.id}`} />
         ))}
       </div>
-      <a className={styles.btn__catalog} href="/">
-        <span>Перейти до каталогу з товарами</span>
-      </a>
     </div>
   );
 };

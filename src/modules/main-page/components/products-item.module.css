@@ -28,6 +28,8 @@
 .wrapper__product {
   width: 325px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .product__card {
   padding-bottom: 35px;
@@ -35,6 +37,7 @@
 .product__card img {
   background-repeat: no-repeat;
   background-size: cover;
+  width: 200px;
 }
 .product__card_description {
   width: 100%;

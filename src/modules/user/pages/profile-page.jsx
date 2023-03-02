@@ -1,3 +1,4 @@
+import { LineImages } from "@app/common/components/line-images/line-images";
 import {
   useGetCustomerDataQuery,
   useUpdateCustomerDataMutation,
@@ -9,10 +10,11 @@ import styles from "./profile-page.module.css";
 
 export const ProfilePage = () => {
   const { data, loading: profileDataLoading } = useGetCustomerDataQuery();
-  const [updateCustomerData, {loading: isProfileUpdating}] = useUpdateCustomerDataMutation();
+  const [updateCustomerData, { loading: isProfileUpdating }] =
+    useUpdateCustomerDataMutation();
 
   const onSubmitCallback = async (values) => {
-   await updateCustomerData({
+    await updateCustomerData({
       variables: {
         id: data?.customers[0].id,
         name: values.name || data?.customers[0].name,
@@ -27,13 +29,17 @@ export const ProfilePage = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <UpdateInfo
-        initialValues={data.customers[0]}
-        onSubmitCallback={onSubmitCallback}
-        isProfileUpdating={isProfileUpdating}
-      />
-      <UserOrders/>
+    <div>
+      <LineImages />
+
+      <div className={styles.container}>
+        <UpdateInfo
+          initialValues={data.customers[0]}
+          onSubmitCallback={onSubmitCallback}
+          isProfileUpdating={isProfileUpdating}
+        />
+        <UserOrders />
+      </div>
     </div>
   );
 };

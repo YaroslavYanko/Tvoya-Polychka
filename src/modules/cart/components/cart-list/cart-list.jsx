@@ -23,7 +23,7 @@ export const CartList = () => {
                 {...item}
                 count={cartItems[item.id]}
                 productItemId={item.id}
-                key={`productCartItem-${item.id}`}
+                key={`product-cart-item-${item.id}`}
               />
             ))}
           </div>

@@ -1,3 +1,4 @@
+import { LineImages } from "@app/common/components/line-images/line-images";
 import { useGetProductsItemsQuery } from "@app/core/types";
 import { useParams } from "react-router-dom";
 
@@ -17,15 +18,18 @@ export const ProductInfoPage = () => {
     return <h3>Ого , здається сталась помилка , зайдіт пізніше</h3>;
   }
   if (loading) {
-    return "s";
+    return " ";
   }
   if (!data) {
     return <h3>Хм , мабуть товари закінчились , зайдіт пізніше</h3>;
   }
-  console.log(data.goods[0])
+
   return (
-    <div className={style.wrapper__product_page}>
-      <ProductItem  {...data.goods[0]}/>
+    <div>
+      <LineImages />
+      <div className={style.wrapper__product_page}>
+        <ProductItem {...data.goods[0]} />
+      </div>
     </div>
   );
 };

@@ -9,15 +9,11 @@ import "./mainSlider.css";
 
 const MainSlider = () => {
   const settings = {
-    // dots: true,
+    dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 0,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    // cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,
@@ -25,25 +21,25 @@ const MainSlider = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
-        },
+          dots: true
+        }
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 2,
-        },
+          initialSlide: 1
+        }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   return (
     <div className="sliderWrapper">

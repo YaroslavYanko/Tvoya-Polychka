@@ -1,0 +1,85 @@
+.products__page {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+}
+.sidebar >ul{
+    border-top:  1px solid #9b9b9b;
+}
+.sidebar .title {
+  color:#444444;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 55px;
+}
+.sidebar ul li {
+  color: #444444;
+  font-size: 18px;
+  line-height: 55px;
+  position: relative;
+  cursor: pointer;
+}
+
+.sidebar ul li {
+  line-height: 40px;
+  padding: 0px 20px;
+}
+.sidebar ul ul li:hover {
+  color: gainsboro;
+}
+.sidebar ul ul li {
+    transition: all 0.5s ease;
+  line-height: 40px;
+  padding-left: 15px;
+}
+
+.arrow {
+  font-size: 22px;
+  transition: all 0.5s ease;
+}
+.arrow__show {
+    font-size: 22px;
+  transition: all 0.5s ease;
+  transform: rotate(-180deg);
+}
+
+
+/* Схований блок */
+.sidebar ul ul.hide {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+/* Показаний блок */
+.sidebar ul ul.show {
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+.wrapper__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1300px){
+  .wrapper__sidebar{
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 980px){
+  .wrapper__sidebar{
+    display: flex;
+    justify-content: center;
+  }
+  .sidebar {
+    width: 90%;
+    height: 100%;
+  }
+
+}

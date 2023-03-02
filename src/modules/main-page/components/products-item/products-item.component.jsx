@@ -13,12 +13,12 @@ const ProductsItem = ({ shortName, title, image, price,id }) => {
     <div className={styles.wrapper__product}>
       <Link to={`/products/${id}`} className={styles.product__card}>   
         <AdvancedImage cldImg={imageCloud} />
+        </Link>
         <div className={styles.product__card_description}>
           <h3 className={styles.product__card_shortName}>{shortName}</h3>
           {/* <h4 className={styles.product__card_title}>{title}</h4> */}
           <span className={styles.product__card_price}>{price} грн</span>
         </div>
-      </Link>
     </div>
   );
 };

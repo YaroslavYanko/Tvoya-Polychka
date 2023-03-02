@@ -17,6 +17,7 @@ export const UserDropdown = ({mainPage}) => {
   useOnClickOutside(ref,()=>{
     if(!isDropDownOpen)return
     toggleDropDownState()
+
   })
 
  const logout = ()=>{

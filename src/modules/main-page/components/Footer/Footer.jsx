@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.footer__info}>
+        {/* <div className={styles.footer__info}>
           <nav>
             <ul>
               <li>
@@ -32,7 +32,7 @@ function Footer() {
           <br />
           <a href="tel:+3804580454558">+3804580454558</a>
           <a href="mailto:ingo@ua.com">info@ua.com</a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

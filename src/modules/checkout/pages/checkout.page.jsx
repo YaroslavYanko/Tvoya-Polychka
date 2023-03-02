@@ -1,4 +1,5 @@
 import { useReactiveVar } from "@apollo/client";
+import { LineImages } from "@app/common/components/line-images/line-images";
 import {
   useCreateOrderMutation,
   useGetCustomerDataQuery,
@@ -13,18 +14,14 @@ import styles from "../checkout.module.css";
 export const CheckoutPage = () => {
   const cart = useReactiveVar(cartState);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-
-  useEffect(()=>{
-
-   //Object.keys повертає ключі обєкта
-   if(Object.keys(cart).length === 0 ){
-    navigate('/', {replace:true})
-   }
-
-  },[cart])
-
+  useEffect(() => {
+    //Object.keys повертає ключі обєкта
+    if (Object.keys(cart).length === 0) {
+      navigate("/", { replace: true });
+    }
+  }, [cart]);
 
   const [createOrderMutatio] = useCreateOrderMutation();
 
@@ -47,25 +44,25 @@ export const CheckoutPage = () => {
       },
     });
 
-    cleanCart()
+    cleanCart();
 
-    navigate('/checkout/thakns-you', {replace:true})
+    navigate("/checkout/thakns-you", { replace: true });
   };
- 
-  //Дані залогіненого користувача 
+
+  //Дані залогіненого користувача
   const { data } = useGetCustomerDataQuery();
 
-
-
-
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper__checkout_form}>
-        <CheckoutForm
-          submitCallback={handleCheckoutSubmit}
-          initialValues={data}
-        />
-        <CartList />
+    <div>
+      <LineImages />
+      <div className={styles.container}>
+        <div className={styles.wrapper__checkout_form}>
+          <CheckoutForm
+            submitCallback={handleCheckoutSubmit}
+            initialValues={data}
+          />
+          <CartList />
+        </div>
       </div>
     </div>
   );

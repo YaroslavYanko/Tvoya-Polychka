@@ -1,8 +1,9 @@
 .mobile__menu {
   display: none;
+  height: 100vh;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .mobile__menu {
     display: block;
     width: 100%;
@@ -33,4 +34,39 @@
     height: 100vh;
     font-size: 2rem;
   }
+
+}
+
+@media (max-width: 320px) {
+ 
+}
+
+
+@media (min-width: 321px) and (max-width: 375px) {
+
+}
+
+
+@media (min-width: 376px) and (max-width: 414px) {
+ 
+}
+
+
+@media (min-width: 415px) and (max-width: 768px) {
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+}
+
+
+@media (min-width: 1441px) {
+ 
 }

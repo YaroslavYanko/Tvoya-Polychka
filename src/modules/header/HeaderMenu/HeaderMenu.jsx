@@ -1,8 +1,8 @@
 import styles from "../header.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { UserDropdown } from "@app/modules/auth/components/user-dropdown.component";
-import basket from "../../../images/basket.svg";
-import { CartSidebar } from "@app/modules/cart/components/cart-sidebar";
+
+
 import { toggleCart } from "@app/modules/cart/store/cart-opened-state";
 
 import { AiOutlineShopping } from "react-icons/ai";
@@ -10,20 +10,34 @@ import { RiMenu2Fill } from "react-icons/ri";
 import { RxEnter } from "react-icons/rx";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { openMobileMenu } from "../MobileMenu/store/mobile-state";
+import { useEffect, useState } from "react";
 
-
-const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
+const HeaderMenu = ({ isLoggedIn }) => {
   const location = useLocation();
 
   const loginIn = location.pathname !== "/login";
   const mainPage = location.pathname !== "/";
 
+  const [isFixed, setIsFixed] = useState(false);
 
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 200) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header style={{ position: mainPage ? "static" : "absolute" }}>
+    <header style={{ position: mainPage ? "static" : "absolute"}}>
       <MobileMenu />
-      <div>
+      <div className={`${styles.wrapperMenuBtn} ${isFixed ? styles.fixedMenuBtn : ""}`}>
         <RiMenu2Fill
           onClick={openMobileMenu}
           className={styles.mobile__menu_btn}
@@ -54,7 +68,7 @@ const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
                 Головна
               </Link>
             </li>
-            <li onMouseMove={showCategory}>
+            <li>
               <Link
                 to="/products"
                 data-drop-list={"drop-list"}
@@ -95,26 +109,24 @@ const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
                 Блог
               </Link>
             </li>
-
-
-
-
           </ul>
 
-
-          <div className={styles.user__menu}>
-          <Link to="#" className={styles.btn__basket_link}>
-                <button
-                  className={`${styles.btn__basket} ${
-                    mainPage && styles.header__category_color
-                  }`}
-                  onClick={toggleCart}
-                  id="basket_header"
-                >
-                  <AiOutlineShopping />
-                </button>
-              </Link>
-       
+          <div
+            className={`${styles.user__menu} ${
+              isFixed ? styles.fixedUserMenu : ""
+            }`}
+          >
+            <Link to="#" className={styles.btn__basket_link}>
+              <button
+                className={`${styles.btn__basket} ${
+                  mainPage && styles.header__category_color
+                }`}
+                onClick={toggleCart}
+                id="basket_header"
+              >
+                <AiOutlineShopping />
+              </button>
+            </Link>
 
             {loginIn && (
               <div
@@ -128,7 +140,7 @@ const HeaderMenu = ({ hideCategory, showCategory, isLoggedIn }) => {
                     to="/login"
                     style={{ color: mainPage ? "#444444" : "white" }}
                   >
-                    <RxEnter/>
+                    <RxEnter />
                   </Link>
                 )}
               </div>
