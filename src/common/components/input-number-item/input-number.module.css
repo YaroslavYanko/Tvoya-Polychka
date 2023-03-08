@@ -1,6 +1,7 @@
 .input__login {
   display: flex;
   flex-direction: column;
+  width: 110px;
 }
 .input__phone {
   width: 60px;
@@ -11,9 +12,14 @@
   font-size: 1.1rem;
   color: #444444;
   text-align: center;
+  padding-left: 7px;
 }
 .input__phone:focus {
   outline: none;
+}
+
+.input__phone ::placeholder {
+  text-align: center;
 }
 
 .input__login > label {
@@ -41,4 +47,5 @@
   color: #444444;
   font-size: 1.7rem;
   background: none;
+  padding-left: 5px;
 }

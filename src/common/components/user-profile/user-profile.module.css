@@ -9,3 +9,12 @@
         
     }
 }
+@media screen and (max-width: 768px){
+    .wrapper__profile_orders{
+        width: 100%;
+        padding: 0px;
+    }
+    .wrapper__profile_orders h2{
+        padding: 20px;
+    }
+}
