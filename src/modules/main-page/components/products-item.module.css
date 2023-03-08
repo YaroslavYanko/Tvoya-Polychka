@@ -47,6 +47,7 @@
   font-weight: normal;
   color: rgb(99, 99, 99);
   margin-bottom: 5px;
+  font-size: 1.1rem;
 }
 .product__card_title {
   font-weight: 500;
@@ -55,7 +56,7 @@
 .product__card_price {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #202429;
+  color: #444444;
 }
 .btn__catalog {
   display: inline-block;
@@ -77,12 +78,12 @@
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .container {
     padding: 15px 0;
   }
   .wrapper__product {
-    width: 180px;
+    width: 225px;
   }
 
   .product__card {
@@ -92,9 +93,7 @@
   }
 
   .product__card img {
-    width: 180px;
-    height: 180px;
-    border-radius: 15px;
+    width: 150px;
   }
   .products {
     justify-content: space-evenly;

@@ -1,16 +1,14 @@
 import styles from "../header.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { UserDropdown } from "@app/modules/auth/components/user-dropdown.component";
-
-
 import { toggleCart } from "@app/modules/cart/store/cart-opened-state";
-
-import { AiOutlineShopping } from "react-icons/ai";
+import { AiOutlineShopping,AiOutlineImport } from "react-icons/ai";
 import { RiMenu2Fill } from "react-icons/ri";
 import { RxEnter } from "react-icons/rx";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { openMobileMenu } from "../MobileMenu/store/mobile-state";
 import { useEffect, useState } from "react";
+import { color } from "@cloudinary/url-gen/qualifiers/background";
 
 const HeaderMenu = ({ isLoggedIn }) => {
   const location = useLocation();
@@ -41,9 +39,45 @@ const HeaderMenu = ({ isLoggedIn }) => {
         <RiMenu2Fill
           onClick={openMobileMenu}
           className={styles.mobile__menu_btn}
-          style={{ color: mainPage ? "#444444" : "white" }}
+          style={{ color: (isFixed ? 'white' : (mainPage ? "#444444" : "white")) }}
         />
       </div>
+
+      <div
+            className={`${styles.user__menu} ${
+              isFixed ? styles.fixedUserMenu : ""
+            }`}
+          >
+            <Link to="#" className={styles.btn__basket_link}>
+              <button
+                className={`${styles.btn__basket} ${
+                  mainPage && styles.header__category_color
+                }`}
+                onClick={toggleCart}
+                id="basket_header"
+              >
+                <AiOutlineShopping style={{  color: (isFixed ? 'white' : (mainPage ? "#444444" : "white")) }} />
+              </button>
+            </Link>
+
+            {loginIn && (
+              <div
+                className={styles.header__login}
+                style={{ color: mainPage ? "#444444" : "white" }}
+              >
+                {isLoggedIn ? (
+                  <UserDropdown mainPage={mainPage} />
+                ) : (
+                  <Link
+                    to="/login"
+                    style={{ color: mainPage ? "#444444" : "white" }}
+                  >
+                    <AiOutlineImport style={{  color: (isFixed ? 'white' : (mainPage ? "#444444" : "white")) }} />
+                  </Link>
+                )}
+              </div>
+            )}
+          </div>
 
       <div className={styles.header__inner}>
         <div className={styles.header__inner_logo}>
@@ -111,41 +145,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
             </li>
           </ul>
 
-          <div
-            className={`${styles.user__menu} ${
-              isFixed ? styles.fixedUserMenu : ""
-            }`}
-          >
-            <Link to="#" className={styles.btn__basket_link}>
-              <button
-                className={`${styles.btn__basket} ${
-                  mainPage && styles.header__category_color
-                }`}
-                onClick={toggleCart}
-                id="basket_header"
-              >
-                <AiOutlineShopping />
-              </button>
-            </Link>
-
-            {loginIn && (
-              <div
-                className={styles.header__login}
-                style={{ color: mainPage ? "#444444" : "white" }}
-              >
-                {isLoggedIn ? (
-                  <UserDropdown mainPage={mainPage} />
-                ) : (
-                  <Link
-                    to="/login"
-                    style={{ color: mainPage ? "#444444" : "white" }}
-                  >
-                    <RxEnter />
-                  </Link>
-                )}
-              </div>
-            )}
-          </div>
+  
         </nav>
       </div>
     </header>

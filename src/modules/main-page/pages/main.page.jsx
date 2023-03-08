@@ -23,7 +23,7 @@ export const MainPage = () => {
 
   return (
     <div className={styles.main__page_wrapper}>
-      <UsefulInformation />
+      {/* <UsefulInformation /> */}
       {categories.map((categorie) => (
         <ProductsList
           item={categorie.goods_items}

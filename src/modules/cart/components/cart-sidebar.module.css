@@ -44,6 +44,9 @@
 }
 .basket__items_empty > span {
   margin-top: 20px;
+  color: #444444;
+  font-size: 18px;
+  font-weight: bold;
 }
 .cart__item {
   width: 100%;
@@ -101,7 +104,7 @@
   color: #444444;
 }
 .cart__btn_delete {
-
+  margin-left: 50px;
   font-size: 1.4rem;
   color: #444444;
   background: none;
@@ -123,6 +126,13 @@
   padding-bottom: 50px;
   font-size: 20px;
   color: #444444;
+}
+.empty__cart{
+  
+  width: 100px;
+  height: 75px;
+  color: #444444;
+
 }
 @media (min-width: 769px) and (max-width: 1024px){
   .cart__sidebar_basket{

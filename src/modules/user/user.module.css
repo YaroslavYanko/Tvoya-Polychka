@@ -1,6 +1,6 @@
 .tr__table_info{
-    background-color:skyblue;
-   
+    background-color: #444444;
+    color: cornsilk;
 }
 .tr__table_info :last-child,.tr__table_info:first-child{
     width: 120px;
@@ -14,4 +14,17 @@ thead tr th{
 td{
     text-align: center;
     padding: 15px;
+}
+
+@media screen and (max-width: 768px){
+    .td__table{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+    table thead{
+        display: none;
+    }
+
 }

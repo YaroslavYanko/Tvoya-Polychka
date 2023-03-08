@@ -2,7 +2,7 @@
 import Footer from "./modules/main-page/components/Footer/Footer";
 import { MainPage } from "./modules/main-page/pages/main.page";
 import { BrowserRouter, Routes } from "react-router-dom";
-import { Route, useLocation } from "react-router";
+import { Route } from "react-router";
 import { ProductsPage } from "./modules/products-page/pages/products.page";
 import { LoginFormPage } from "./modules/auth/page/login-form.page";
 import { Helmet } from "react-helmet";
@@ -24,6 +24,7 @@ function App() {
   return (
     <BrowserRouter>
       <Helmet titleTemplate="Твоя поличка - %s" defaultTitle="Твоя поличка" />
+
       <div className="wrapper__page">
         <HeaderContainer />
 

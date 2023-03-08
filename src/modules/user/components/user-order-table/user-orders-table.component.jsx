@@ -65,7 +65,7 @@ export const UserOrdersTable = ({ data, orderStatus }) => {
         {table.getRowModel().rows.map((row) => (
           <tr className={styles.tr__table_info} key={row.id}>
             {row.getVisibleCells().map((cell) => (
-              <td key={cell.id}>
+              <td className={styles.td__table} key={cell.id}>
                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
               </td>
             ))}

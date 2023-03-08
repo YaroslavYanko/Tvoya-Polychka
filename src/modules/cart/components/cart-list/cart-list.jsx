@@ -13,7 +13,7 @@ export const CartList = () => {
   data?.goods.reduce((acc, value) => {
     return acc + value.price * cartItems[value.id];
   }, 0) ?? 0;
-
+  console.log(data)
   return (  
       <div className={styles.cart__sidebar_basket}>
           <div className={styles.checkout__price}><span>Загальна сума: {cartSum} грн</span></div>

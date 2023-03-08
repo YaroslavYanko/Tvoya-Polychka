@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { cartOpenedState, closeCart } from "../store/cart-opened-state";
 import { cartState } from "../store/cart-state";
 import { CartList } from "./cart-list/cart-list";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import { RiCloseFill } from "react-icons/ri";
 
@@ -87,7 +88,7 @@ export const CartSidebar = () => {
       </div>
       {Object.keys(cartItems).length === 0 ? (
         <div className={styles.basket__items_empty}>
-          <p>Картинка</p>
+          <AiOutlineShoppingCart className={styles.empty__cart}/>
           <span>Ви не добавляли товарів</span>
         </div>
       ) : (

@@ -1,9 +1,13 @@
 import { InputNumber } from "@app/common/components/input-number-item/input-number-item";
 import { cloudinary } from "@app/core/cloudinary";
-import { addItemToCart } from "@app/modules/cart/store/cart-state";
+import {
+  addItemToCart,
+  changeCartItemAmount,
+} from "@app/modules/cart/store/cart-state";
 import { AdvancedImage } from "@cloudinary/react";
 import styles from "../../product-info-page.module.css";
 import Description from "./product-description/product-description";
+import { Helmet } from "react-helmet";
 
 export const ProductItem = ({
   title,
@@ -14,6 +18,7 @@ export const ProductItem = ({
   characteristics,
   ingredients,
   id,
+  count,
 }) => {
   const imageCloud = cloudinary.image(image);
 
@@ -33,35 +38,51 @@ export const ProductItem = ({
     }
   });
 
+  const handleChangeAmount = (amount) => {
+    changeCartItemAmount(id, amount);
+  };
+
   const handleAddToCart = () => {
     addItemToCart(id);
   };
 
   return (
-    <div className={styles.wrapper_product_item}>
-      <div className={styles.product__item_title}>
-        <AdvancedImage cldImg={imageCloud} />
-        <div className={styles.item_title}>
-          <h1>{shortName}</h1>
-          <div className={styles.line}></div>
-          <h3>{title}</h3>
-          <div className={styles.characteristics}>
-            <ul>{newСharacter}</ul>
-          </div>
-          <div className={styles.price}>
-            <div>
-              <InputNumber />
-              <span>{price} грн</span>
+    <>
+      <Helmet>
+        <title>{shortName} - Твоя поличка</title>
+        <meta name="description" content="Опис товару для пошукових систем" />
+        <meta property="og:title" content={shortName} />
+        <meta property="og:image" content={image} />
+        <meta property="og:description" content={description} />
+        <meta name="twitter:title" content={shortName} />
+        <meta name="twitter:description" content={description} />
+        <link rel="canonical" href={`https://tvoyapolychka.com.ua/products/${id}`} />
+      </Helmet>
+      <div className={styles.wrapper_product_item}>
+        <div className={styles.product__item_title}>
+          <AdvancedImage cldImg={imageCloud} />
+          <div className={styles.item_title}>
+            <h1>{shortName}</h1>
+            <div className={styles.line}></div>
+            <h3>{title}</h3>
+            <div className={styles.characteristics}>
+              <ul>{newСharacter}</ul>
+            </div>
+            <div className={styles.price}>
+              <div>
+                <InputNumber value={count} setValue={handleChangeAmount} />
+                <span>{price} грн</span>
+              </div>
             </div>
             <button onClick={handleAddToCart}>до кошика</button>
           </div>
         </div>
-      </div>
 
-      <div className={styles.product__item_description}>
-        <div className={styles.line}></div>
-        <Description description={description} ingredients={ingredients} />
+        <div className={styles.product__item_description}>
+          <div className={styles.line}></div>
+          <Description description={description} ingredients={ingredients} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
