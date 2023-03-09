@@ -34,7 +34,6 @@ export const ProductsPage = () => {
           .goods_items;
 
   const handleCategorySelect = (categorySlug) => {
-    console.log(categorySlug);
     setSelectedCategory(categorySlug);
   };
 

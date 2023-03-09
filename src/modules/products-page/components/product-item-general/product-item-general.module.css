@@ -8,8 +8,10 @@
     margin-top: 80px;
 }
 .product__card_description{
-
     padding: 10px;
+}
+.product__card_description span{
+    font-weight: bold;
 }
 .product__card_shortName{
     font-size: 1em;

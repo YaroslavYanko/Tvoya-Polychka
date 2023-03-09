@@ -58,9 +58,7 @@
   font-weight: bold;
   padding: 5px 15px;
 }
-.tab:hover{
-  border-bottom: 2px solid #777777;
-}
+
 .tab.active{
   border-bottom: 2px solid #444444;
   border-radius: 0;

@@ -32,8 +32,11 @@ header {
 }
 .header__login a {
   display: flex;
-  font-size: 25px;
+  font-size: 19px;
   transition: 1s all;
+}
+.header__login a svg{
+  transition: 1s all ease;
 }
 .header__inner_logo > a > h3 {
   color: orange;
@@ -95,10 +98,6 @@ header {
 .header__category_color {
   color: #444444;
 }
-
-/* .header__category:hover {
-  color: rgb(138, 138, 138);
-} */
 .header__category:after {
   content: "";
   width: 0%;
@@ -110,6 +109,10 @@ header {
   transition: 0.5s ease all;
   z-index: 500;
   border-radius: 30px;
+}
+
+.header__category.header__category_color:after {
+  background-color: #444444;
 }
 
 .header__category:hover:after {
@@ -164,8 +167,13 @@ header {
   border: none;
   background: none;
   font-size: 30px;
-  transition: 1s all;
+  transition: 1s all ease;
 }
+.btn__basket svg{
+  transition: all 1s;
+}
+
+
 /* ----------------useful information---------------------------- */
 
 .container__usefulInformation {

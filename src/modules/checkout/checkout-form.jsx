@@ -49,7 +49,6 @@ export const CheckoutForm = ({ submitCallback ,initialValues}) => {
   });
 
   useEffect(() => {
- console.log(initialValues)
       reset({
         name:initialValues?.customers[0].name ?? "",
         surname:initialValues?.customers[0].surname ?? "",

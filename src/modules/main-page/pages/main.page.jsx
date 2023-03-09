@@ -18,7 +18,6 @@ export const MainPage = () => {
     return <h3>Хм , мабуть товари закінчились , зайдіт пізніше</h3>;
   }
 
-  console.log(data.categories);
   const categories = data.categories.slice(0, 2);
 
   return (
