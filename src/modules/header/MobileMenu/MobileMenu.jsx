@@ -33,7 +33,7 @@ const MobileMenu = () => {
             <Link onClick={closeMobileMenu} to="/">Головна</Link>
           </li>
           <li>
-            <Link onClick={closeMobileMenu} to="/products">Магазин</Link>
+            <Link onClick={closeMobileMenu} to="/products">Товари</Link>
           </li>
           <li>
             <Link to="/">Доставка</Link>

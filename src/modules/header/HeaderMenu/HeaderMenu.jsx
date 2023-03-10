@@ -110,7 +110,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
                   mainPage && styles.header__category_color
                 }`}
               >
-                Магазин
+                Товари
               </Link>
             </li>
             <li>
