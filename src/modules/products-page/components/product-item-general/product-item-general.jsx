@@ -22,6 +22,7 @@ export const ProductItemGeneral = ({ shortName, title, image, price, id }) => {
 
         <div className={styles.product__card_description}>
           <h2 className={styles.product__card_shortName}>{shortName}</h2>
+           <div className={styles.product__line}></div>
           <br />
           <span className={styles.product__card_price}>{price} грн</span>
         </div>

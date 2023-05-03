@@ -19,6 +19,7 @@
 }
 .products__title {
   width: 100%;
+  padding-left: 25px;
 }
 .products__title > h2 {
   font-size: 36px;
@@ -83,7 +84,7 @@
     padding: 15px 0;
   }
   .wrapper__product {
-    width: 225px;
+    width: 175px;
   }
 
   .product__card {
@@ -100,6 +101,10 @@
   }
   .btn__catalog {
     margin-top: 35px;
+  }
+  .products__title {
+    padding: 0;
+    text-align: center;
   }
 }
 

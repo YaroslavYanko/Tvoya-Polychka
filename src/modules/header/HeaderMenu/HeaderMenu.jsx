@@ -59,7 +59,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
                 <AiOutlineShopping style={{  color: (isFixed ? 'white' : (mainPage ? "#444444" : "white")) }} />
               </button>
             </Link>
-
+            
             {loginIn && (
               <div
                 className={styles.header__login}
@@ -113,12 +113,22 @@ const HeaderMenu = ({ isLoggedIn }) => {
                 Товари
               </Link>
             </li>
+            {/* <li>
+              <Link
+                className={`${styles.header__category} ${
+                  mainPage && styles.header__category_color
+                }`}
+                to="/delivery"
+              >
+                Оплата і Доставка
+              </Link>
+            </li> */}
             <li>
               <Link
                 className={`${styles.header__category} ${
                   mainPage && styles.header__category_color
                 }`}
-                to="/aboutus"
+                to="/delivery"
               >
                 Доставка
               </Link>
@@ -128,17 +138,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
                 className={`${styles.header__category} ${
                   mainPage && styles.header__category_color
                 }`}
-                to="/"
-              >
-                Новинки
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`${styles.header__category} ${
-                  mainPage && styles.header__category_color
-                }`}
-                to="/"
+                to="/blog"
               >
                 Блог
               </Link>

@@ -32,10 +32,10 @@ header {
 }
 .header__login a {
   display: flex;
-  font-size: 19px;
+  font-size: 25px;
   transition: 1s all;
 }
-.header__login a svg{
+.header__login a svg {
   transition: 1s all ease;
 }
 .header__inner_logo > a > h3 {
@@ -111,6 +111,13 @@ header {
   border-radius: 30px;
 }
 
+.mainHeader_wrapper {
+  width: 100%;
+  overflow: hidden;
+  height: 350px;
+  background-color: #444444;
+}
+
 .header__category.header__category_color:after {
   background-color: #444444;
 }
@@ -169,10 +176,9 @@ header {
   font-size: 30px;
   transition: 1s all ease;
 }
-.btn__basket svg{
+.btn__basket svg {
   transition: all 1s;
 }
-
 
 /* ----------------useful information---------------------------- */
 
@@ -237,11 +243,16 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-  .user__menu{
-    margin:0;
-   position: absolute;
-   right: 0;
-   top: 15px;
+  
+.mainHeader_wrapper {
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 0%;
+}
+  .user__menu {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 15px;
   }
   .header__menu nav {
     width: auto;
@@ -255,14 +266,13 @@ header {
   .header__menu_nav {
     display: none;
   }
-  .wrapperMenuBtn{
+  .wrapperMenuBtn {
     padding: 15px;
   }
   .mobile__menu_btn {
     display: block;
     font-size: 35px;
     transition: 1s all;
-
   }
   .header__inner_logo > a > h3 {
     font-family: "Bad Script", cursive;
@@ -308,7 +318,6 @@ header {
     background-color: #444444de;
     width: 100%;
     z-index: 90;
-   
   }
-
+  
 }

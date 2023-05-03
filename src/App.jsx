@@ -14,6 +14,9 @@ import { CheckoutPage } from "./modules/checkout/pages/checkout.page";
 import ThankYouPage from "./modules/checkout/pages/thank-you.page";
 import { ProductInfoPage } from "./modules/product-info-page/page/product-info-page";
 import HeaderContainer from "./modules/header/HeaderContainer";
+import { Delivery } from "./modules/delivery/delivery";
+import { Rules } from "./modules/rules/rules";
+import { Blog } from "./modules/blog/blog";
 
 function App() {
   useEffect(() => {
@@ -43,6 +46,9 @@ function App() {
           />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/checkout/thakns-you" element={<ThankYouPage />} />
+          <Route path="/delivery" element={<Delivery/>} />
+          <Route path="/blog" element={<Blog/>} />
+          <Route path="/rules" element={<Rules/>} />
         </Routes>
         <Footer />
       </div>

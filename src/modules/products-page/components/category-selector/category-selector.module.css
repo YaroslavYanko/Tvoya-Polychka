@@ -56,9 +56,9 @@
 
 /* Показаний блок */
 .sidebar ul ul.show {
-  max-height: 100px;
+  max-height: 500px;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height  2s ease;
 }
 .wrapper__list {
   display: flex;

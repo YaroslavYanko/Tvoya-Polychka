@@ -22,7 +22,8 @@ const HeaderContainer = () => {
       }`}
     >
       <HeaderMenu isLoggedIn={isLoggedIn} />
-      {mainHeader && <MainSlider />}
+      {/* {mainHeader && <MainSlider />} */}
+      {mainHeader && <div className={styles.mainHeader_wrapper}></div>}
       <CartSidebar />
     </div>
   );

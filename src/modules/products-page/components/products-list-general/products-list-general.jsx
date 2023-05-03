@@ -9,11 +9,6 @@ const PAGE_SIZE = 25;
 const ProductsListGeneral = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
-
-
-
-  
-
   const LeftArrowIcon = () => <FaArrowLeft />;
   const RightArrowIcon = () => <FaArrowRight />;
 

@@ -11,6 +11,17 @@
     align-items: flex-start;
     width: 1300px;
 }
+.thanksPage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px 100px 0px;
+}
+.thanksPage h2{
+    font-size: 35px;
+    padding-bottom: 50px;
+}
 @media (min-width: 769px) and (max-width: 1024px){
     .wrapper__checkout_form{
         display: flex;
