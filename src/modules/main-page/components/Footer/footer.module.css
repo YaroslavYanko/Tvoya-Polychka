@@ -103,3 +103,15 @@
     font-size: 0.9rem;
   }
 }
+@media screen and (max-width: 600px) {
+ .footer__info nav{
+   width: 80%;
+ }
+  .work__time{
+    width: 80%;
+    padding:25px 0px 25px 0px;
+  }
+  .contacts{
+    width: 80%;
+  }
+}
