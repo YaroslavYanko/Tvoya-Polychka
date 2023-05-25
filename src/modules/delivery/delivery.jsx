@@ -3,8 +3,14 @@ import styles from "./delivery.module.css";
 
 import delivery_truck from "../../images/icons/delivery_truck.png";
 import cash_register from "../../images/icons/cash_register.png";
+import { useEffect } from "react";
 
 export const Delivery = () => {
+ 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <LineImages />

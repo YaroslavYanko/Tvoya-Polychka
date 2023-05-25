@@ -30,16 +30,16 @@ const MobileMenu = () => {
       <nav className={styles.mobile__menu_nav}>
         <ul>
           <li>
-            <Link onClick={closeMobileMenu} to="/">Головна</Link>
+            <Link onClick={closeMobileMenu} to="/">ГОЛОВНА</Link>
           </li>
           <li>
-            <Link onClick={closeMobileMenu} to="/products">Товари</Link>
+            <Link onClick={closeMobileMenu} to="/products">ТОВАРИ</Link>
           </li>
           <li>
-            <Link onClick={closeMobileMenu} to="/delivery">Доставка</Link>
+            <Link onClick={closeMobileMenu} to="/delivery">ОПЛАТА І ДОСТАВКА</Link>
           </li>
           <li>
-            <Link onClick={closeMobileMenu} to="/blog">Блог</Link>
+            <Link onClick={closeMobileMenu} to="/blog">БЛОГ</Link>
           </li>
         </ul>
       </nav>

@@ -9,6 +9,7 @@ import MobileMenu from "../MobileMenu/MobileMenu";
 import { openMobileMenu } from "../MobileMenu/store/mobile-state";
 import { useEffect, useState } from "react";
 import { color } from "@cloudinary/url-gen/qualifiers/background";
+import InputSearch from "@app/common/components/input-searh/inputSearch";
 
 const HeaderMenu = ({ isLoggedIn }) => {
   const location = useLocation();
@@ -17,6 +18,8 @@ const HeaderMenu = ({ isLoggedIn }) => {
   const mainPage = location.pathname !== "/";
 
   const [isFixed, setIsFixed] = useState(false);
+
+  const inputSearchColor = isFixed ? 'white' : mainPage ? "#444444" : "white";
 
   useEffect(() => {
     function handleScroll() {
@@ -48,6 +51,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
               isFixed ? styles.fixedUserMenu : ""
             }`}
           >
+              <InputSearch inputSearchColor={inputSearchColor}  />
             <Link to="#" className={styles.btn__basket_link}>
               <button
                 className={`${styles.btn__basket} ${
@@ -59,7 +63,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
                 <AiOutlineShopping style={{  color: (isFixed ? 'white' : (mainPage ? "#444444" : "white")) }} />
               </button>
             </Link>
-            
+         
             {loginIn && (
               <div
                 className={styles.header__login}
@@ -77,8 +81,9 @@ const HeaderMenu = ({ isLoggedIn }) => {
                 )}
               </div>
             )}
+           
           </div>
-
+      
       <div className={styles.header__inner}>
         <div className={styles.header__inner_logo}>
           <Link to="/">
@@ -99,7 +104,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
                 }`}
                 to="/"
               >
-                Головна
+                ГОЛОВНА
               </Link>
             </li>
             <li>
@@ -110,19 +115,9 @@ const HeaderMenu = ({ isLoggedIn }) => {
                   mainPage && styles.header__category_color
                 }`}
               >
-                Товари
+                ТОВАРИ
               </Link>
             </li>
-            {/* <li>
-              <Link
-                className={`${styles.header__category} ${
-                  mainPage && styles.header__category_color
-                }`}
-                to="/delivery"
-              >
-                Оплата і Доставка
-              </Link>
-            </li> */}
             <li>
               <Link
                 className={`${styles.header__category} ${
@@ -130,7 +125,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
                 }`}
                 to="/delivery"
               >
-                Доставка
+                ОПЛАТА І ДОСТАВКА
               </Link>
             </li>
             <li>
@@ -140,7 +135,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
                 }`}
                 to="/blog"
               >
-                Блог
+                БЛОГ
               </Link>
             </li>
           </ul>

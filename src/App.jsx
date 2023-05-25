@@ -22,6 +22,8 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem("jwt");
     isLoggedInReactive(Boolean(token));
+
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -46,9 +48,9 @@ function App() {
           />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/checkout/thakns-you" element={<ThankYouPage />} />
-          <Route path="/delivery" element={<Delivery/>} />
-          <Route path="/blog" element={<Blog/>} />
-          <Route path="/rules" element={<Rules/>} />
+          <Route path="/delivery" element={<Delivery />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/rules" element={<Rules />} />
         </Routes>
         <Footer />
       </div>

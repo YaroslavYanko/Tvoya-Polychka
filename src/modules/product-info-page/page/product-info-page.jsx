@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 
 import { ProductItem } from "../components/product-item/product-item";
 import style from "../product-info-page.module.css";
+import { useEffect } from "react";
 
 export const ProductInfoPage = () => {
   const { id } = useParams();
@@ -14,8 +15,12 @@ export const ProductInfoPage = () => {
       productsIds: id,
     },
   });
-
+ 
   const {cartItems } = useCartItems()
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (error) {
     return <h3>Ого , здається сталась помилка , зайдіт пізніше</h3>;

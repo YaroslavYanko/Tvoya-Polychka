@@ -3,10 +3,15 @@ import { ProductsListLoading } from "../components/products-list-loading/product
 import ProductsList from "../components/products-list/products-list.component";
 import styles from "../components/products-item.module.css";
 import { UsefulInformation } from "@app/modules/header/useful-information/useful-information";
+import { useEffect } from "react";
 
 export const MainPage = () => {
   const { data, loading, error } = useGetGoodsQuery();
   // const { data:settings} = useGetSettingsQuery({fetchPolicy: 'cache-only'})
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (error) {
     return <h3>Ого , здається сталась помилка , зайдіт пізніше</h3>;
@@ -19,6 +24,8 @@ export const MainPage = () => {
   }
 
   const categories = data.categories.slice(0, 2);
+
+
 
   return (
     <div className={styles.main__page_wrapper}>

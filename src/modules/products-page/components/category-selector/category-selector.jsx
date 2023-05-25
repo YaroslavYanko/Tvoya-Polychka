@@ -46,8 +46,8 @@ export const CategorySelector = ({ onCategorySelect }) => {
             </div>
 
             <ul className={openMenuIndex === 1 ? styles.show : styles.hide}>
-              <li>Маски під очі</li>
-              <li>Крем для лиця</li>
+              <li onClick={() => onCategorySelect("Patchi")}>Патчі під очі</li>
+              <li onClick={() => onCategorySelect("Serum")}>Сироватка</li>
             </ul>
             
           </li>
@@ -60,7 +60,7 @@ export const CategorySelector = ({ onCategorySelect }) => {
             </div>
 
             <ul className={openMenuIndex === 2 ? styles.show : styles.hide}>
-              <li>Лосьйон</li>
+              <li onClick={() => onCategorySelect("Soap")}>Мило</li>
             </ul>
             
           </li>
@@ -71,9 +71,9 @@ export const CategorySelector = ({ onCategorySelect }) => {
                 className={openMenuIndex === 3 ? styles.arrow__show : styles.arrow}
               />
             </div>
-
+           
             <ul className={openMenuIndex === 3 ? styles.show : styles.hide}>
-              <li>Крем</li>
+              <li onClick={() => onCategorySelect("HandCream")}>Крем</li>
             </ul>
           </li>
         </ul>

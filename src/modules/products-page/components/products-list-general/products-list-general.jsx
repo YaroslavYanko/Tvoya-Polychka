@@ -4,7 +4,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import styles from "./products-list.module.css";
 
-const PAGE_SIZE = 25;
+const PAGE_SIZE = 28;
 
 const ProductsListGeneral = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,6 +15,7 @@ const ProductsListGeneral = ({ products }) => {
   const handlePrevClick = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -22,6 +23,7 @@ const ProductsListGeneral = ({ products }) => {
     const totalPages = Math.ceil(products.length / PAGE_SIZE);
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -37,9 +39,9 @@ const ProductsListGeneral = ({ products }) => {
   if (currentPage < totalPages) {
     pageNumbers.push(currentPage + 1);
   }
+
   return (
     <div>
-    
       <div className={styles.container}>
         {visibleProducts.map((item) => (
           <ProductItemGeneral {...item} key={`productsGeneral-${item.id}`} />

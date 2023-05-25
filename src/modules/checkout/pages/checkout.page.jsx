@@ -15,7 +15,10 @@ export const CheckoutPage = () => {
   const cart = useReactiveVar(cartState);
 
   const navigate = useNavigate();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   useEffect(() => {
     //Object.keys повертає ключі обєкта
     if (Object.keys(cart).length === 0) {
