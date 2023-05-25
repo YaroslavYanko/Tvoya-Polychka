@@ -4,7 +4,6 @@
   justify-content: center;
   background-color: #f7f8fa;
   margin-top: auto;
-
 }
 .container {
   width: 1300px;
@@ -19,56 +18,88 @@
 .footer__menu:hover {
   color: rgb(138, 138, 138);
 }
-.footer__info > a{
+.footer__info > a {
   font-size: 1.1rem;
 }
-.footer__info >nav a{
+.footer__info > nav a {
   font-size: 1.2rem;
 }
-.footer__info{
+.footer__info {
   display: flex;
   justify-content: space-between;
 }
-.email__heading,.weekend__heading{
- padding-top: 10px;
+.email__heading,
+.weekend__heading {
+  padding-top: 10px;
 }
-.footer__info h3{
+.footer__info h3 {
   padding-bottom: 10px;
 }
-.work__time span{
+.work__time span {
   color: #444444;
   font-size: 1.1rem;
 }
-.contacts a{
+.contacts__boxes a {
   font-size: 1.1rem;
 }
-@media screen and (max-width: 1325px){
-  .container{
+.contacts__boxes, .work__time_boxes{
+  display: flex;
+  align-items: center;
+}
+
+.contacts__boxes a {
+  margin-left: 10px;
+}
+.contacts__boxes a[href="tel:+380986388747"] {
+  margin-left: 2px;
+}
+
+.work__time_boxes span{
+  margin-left: 10px;
+}
+.footer__info nav ul {
+  flex-direction: column;
+}
+.footer__info{
+  flex-wrap: wrap;
+}
+.work__time{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media screen and (max-width: 1325px) {
+  .container {
     padding-left: 25px;
     padding-right: 25px;
   }
 }
-@media screen and (max-width: 768px){
-  .footer__info >nav a{
-    font-size: 0.8rem;
+@media screen and (max-width: 768px) {
+  .footer__info > nav a {
+    font-size: 1rem;
+  }
+  .work__time_boxes {
+    font-size: 0.9rem;
   }
   .work__time{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
-  .contacts{
-    font-size: 0.7rem;
+  .contacts {
+    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 600px) {
-  .footer__info nav ul {
-    flex-direction: column;
-  }
+
   .footer__info nav ul li {
     padding-top: 5px;
   }
-  .footer{
+  .footer {
     margin-top: 35px;
   }
 
+  .contacts__boxes a{
+    font-size: 1rem;
+  }
+  .work__time_boxes span{
+    font-size: 0.9rem;
+  }
 }
-
