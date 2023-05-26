@@ -108,7 +108,9 @@ ul li {
   text-indent: -1em;
   margin-left: 1em;
 }
-
+ul li button svg{
+  margin-top: 0.2em;
+}
 @media screen and (max-width: 1300px) {
   .wrapper__product_page {
     width: 100%;

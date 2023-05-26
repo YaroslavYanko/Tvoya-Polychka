@@ -55,7 +55,7 @@ const allProducts = data.categories.reduce((acc, category) => {
   
         <CategorySelector onCategorySelect={handleCategorySelect} />
 
-        <ProductsListGeneral products={products} />
+        <ProductsListGeneral products={products} selectedCategory={selectedCategory}/>
       </div>
     </div>
   );

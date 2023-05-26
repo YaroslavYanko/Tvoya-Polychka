@@ -1,12 +1,12 @@
 import { ProductItemGeneral } from "../product-item-general/product-item-general";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import styles from "./products-list.module.css";
 
 const PAGE_SIZE = 28;
 
-const ProductsListGeneral = ({ products }) => {
+const ProductsListGeneral = ({ products,selectedCategory }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const LeftArrowIcon = () => <FaArrowLeft />;
@@ -39,6 +39,10 @@ const ProductsListGeneral = ({ products }) => {
   if (currentPage < totalPages) {
     pageNumbers.push(currentPage + 1);
   }
+
+  useEffect(() => {
+    setCurrentPage(1); // Оновлюємо currentPage на 1 при зміні категорії
+  }, [selectedCategory]);
 
   return (
     <div>

@@ -14,22 +14,21 @@ export const ProductItemGeneral = ({ shortName, title, image, price, id }) => {
 
   return (
     <div className={styles.wrapper__product}>
-           <Link to={`/products/${id}`}>
-      <div className={styles.product__card}>
-   
+      <Link to={`/products/${id}`}>
+        <div className={styles.product__card}>
           <AdvancedImage cldImg={imageCloud} />
-    
 
-        <div className={styles.product__card_description}>
-          <h2 className={styles.product__card_shortName}>{shortName}</h2>
-           <div className={styles.product__line}></div>
-          <br />
-          <span className={styles.product__card_price}>{price} грн</span>
+          <div className={styles.product__card_description}>
+            <h2 className={styles.product__card_shortName}>{shortName}</h2>
+            <div className={styles.product__line}></div>
+            <br />
+            <span className={styles.product__card_price}>{price} грн</span>
+          </div>
         </div>
-      </div>
-     
       </Link>
-       <button className={styles.btn__card} onClick={handleAddToCart}>до кошика</button>
+      <button className={styles.btn__card} onClick={handleAddToCart}>
+        до кошика
+      </button>
     </div>
   );
 };

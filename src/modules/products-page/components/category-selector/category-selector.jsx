@@ -23,10 +23,12 @@ export const CategorySelector = ({ onCategorySelect }) => {
         <ul>
           <li onClick={() => onCategorySelect("all")}>Всі товари</li>
           <li onClick={() => handleMenuClick(0)}>
-            <div className={styles.wrapper__list} >
+            <div className={styles.wrapper__list}>
               Для волосся
               <IoMdArrowDropdown
-                className={openMenuIndex === 0 ? styles.arrow__show : styles.arrow}
+                className={
+                  openMenuIndex === 0 ? styles.arrow__show : styles.arrow
+                }
               />
             </div>
 
@@ -35,43 +37,51 @@ export const CategorySelector = ({ onCategorySelect }) => {
               <li onClick={() => onCategorySelect("hairDye")}>Фарба</li>
               <li onClick={() => onCategorySelect("HairSpray")}>Спрей</li>
               <li onClick={() => onCategorySelect("hairSerum")}>Cироватка</li>
+              <li onClick={() => onCategorySelect("EssentialOil")}>
+                Ефірна олія
+              </li>
             </ul>
           </li>
           <li onClick={() => handleMenuClick(1)}>
             <div className={styles.wrapper__list}>
               Для лиця
               <IoMdArrowDropdown
-                className={openMenuIndex === 1 ? styles.arrow__show : styles.arrow}
+                className={
+                  openMenuIndex === 1 ? styles.arrow__show : styles.arrow
+                }
               />
             </div>
 
             <ul className={openMenuIndex === 1 ? styles.show : styles.hide}>
               <li onClick={() => onCategorySelect("Patchi")}>Патчі під очі</li>
-              <li onClick={() => onCategorySelect("Serum")}>Сироватка</li>
+              <li onClick={() => onCategorySelect("Mask")}>Маска</li>
+              <li onClick={() => onCategorySelect("Serum")}>Сироватка</li>   
             </ul>
-            
           </li>
           <li onClick={() => handleMenuClick(2)}>
             <div className={styles.wrapper__list}>
               Для тіла
               <IoMdArrowDropdown
-                className={openMenuIndex === 2 ? styles.arrow__show : styles.arrow}
+                className={
+                  openMenuIndex === 2 ? styles.arrow__show : styles.arrow
+                }
               />
             </div>
 
             <ul className={openMenuIndex === 2 ? styles.show : styles.hide}>
               <li onClick={() => onCategorySelect("Soap")}>Мило</li>
             </ul>
-            
           </li>
           <li onClick={() => handleMenuClick(3)}>
             <div className={styles.wrapper__list}>
               Для рук
               <IoMdArrowDropdown
-                className={openMenuIndex === 3 ? styles.arrow__show : styles.arrow}
+                className={
+                  openMenuIndex === 3 ? styles.arrow__show : styles.arrow
+                }
               />
             </div>
-           
+
             <ul className={openMenuIndex === 3 ? styles.show : styles.hide}>
               <li onClick={() => onCategorySelect("HandCream")}>Крем</li>
             </ul>
