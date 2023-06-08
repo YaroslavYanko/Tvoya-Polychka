@@ -3,7 +3,7 @@ import styles from "./inputSearch.module.css";
 import { AdvancedImage } from "@cloudinary/react";
 import { cloudinary } from "@app/core/cloudinary";
 
-import { BsSearch } from "react-icons/bs";
+import { IoSearch } from 'react-icons/io5';
 import { useGetGoodsQuery } from "@app/core/types";
 import { Link } from "react-router-dom";
 
@@ -65,7 +65,7 @@ export default function InputSearch({ inputSearchColor }) {
   }
   if (loading) {
     return (
-      <BsSearch
+      <IoSearch
         className={styles.btn__search}
         color={inputSearchColor}
         onClick={handleIconClick}
@@ -78,7 +78,7 @@ export default function InputSearch({ inputSearchColor }) {
 
   return (
     <div className={styles.search__container}>
-      <BsSearch
+      <IoSearch
         className={styles.btn__search}
         color={inputSearchColor}
         onClick={handleIconClick}
