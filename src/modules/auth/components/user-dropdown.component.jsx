@@ -7,34 +7,44 @@ import { isLoggedInReactive } from "../store/reactive-vars";
 
 import { HiOutlineUserCircle } from "react-icons/hi";
 
-export const UserDropdown = ({mainPage}) => {
+export const UserDropdown = ({ mainPage, isFixed }) => {
   const [isDropDownOpen, setDropDownOpen] = useState(false);
 
   const toggleDropDownState = () => setDropDownOpen((drop) => !drop);
-  
-  const ref =useRef(null)
 
-  useOnClickOutside(ref,()=>{
-    if(!isDropDownOpen)return
-    toggleDropDownState()
+  const ref = useRef(null);
 
-  })
+  useOnClickOutside(ref, () => {
+    if (!isDropDownOpen) return;
+    toggleDropDownState();
+  });
 
- const logout = ()=>{
-    toggleDropDownState()
-    localStorage.removeItem('jwt')
-    isLoggedInReactive(false)
- }
+  const logout = () => {
+    toggleDropDownState();
+    localStorage.removeItem("jwt");
+    isLoggedInReactive(false);
+  };
 
   return (
     <div className={styles.user__drop} ref={ref}>
-      <button onClick={toggleDropDownState} className={styles.user__drop_icon}  style={{ color: mainPage ? '#444444' : "white" }}>
-     <HiOutlineUserCircle/>
+      <button
+        onClick={toggleDropDownState}
+        className={styles.user__drop_icon}
+        style={{
+          color: mainPage ? "#444444" : "white",
+          color: isFixed ? "white" : mainPage ? "#444444" : "white",
+        }}
+      >
+        <HiOutlineUserCircle />
       </button>
       {isDropDownOpen && (
         <div className={styles.user__drop_menu}>
-          <Link to="/profile" onClick={toggleDropDownState}>Ваш профіль</Link>
-          <Link to="" onClick={logout}>Вийти</Link>
+          <Link to="/profile" onClick={toggleDropDownState}>
+            Ваш профіль
+          </Link>
+          <Link to="" onClick={logout}>
+            Вийти
+          </Link>
         </div>
       )}
     </div>

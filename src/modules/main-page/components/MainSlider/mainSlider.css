@@ -1,29 +1,97 @@
-.sliderWrapper{
-    width: 100%;
-    overflow: hidden;
-    height: 750px;
+.sliderWrapper {
+  max-width: 1500px;
+  overflow: hidden;
+  height: 750px;
+  margin: auto;
 }
-.card{
-    overflow: hidden;
-    outline: none;
+.card {
+  overflow: hidden;
+  outline: none;
+  display: flex;
+  margin-top: 75px;
+  display: flex !important;
+  justify-content: center !important;
 }
-.card>img{
-  width: 100%;
+.card__wrapper {
+  display: flex;
+  position: relative;
+}
+.card__border {
+  position: absolute;
+  width: 420px;
+  height: 205px;
+  border: solid rgb(146, 146, 146) 1px;
+  margin-left: 10px;
+  margin-top: 8px;
+}
+.card__wrapper > img {
+  width: 175px;
   object-fit: cover;
-  /* background-position: top; */
-  block-size: 750px;
-  filter: brightness(0.5);
-  transition: 0.5s all ease;
-  animation-name: zoom;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate ;
+  height: 220px;
 }
-@keyframes zoom {
-  0% {
-    transform: scale(1);
+.usefulInformation__title {
+  width: 250px;
+  padding: 10px;
+}
+.container__usefulInformation {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container__info_title {
+  position: absolute;
+  left: -70px;
+  transform: rotate(-90deg);
+  letter-spacing: 3px;
+  margin-top: 170px;
+}
+
+@media screen and (max-width: 1650px) {
+  .sliderWrapper {
+    padding-left: 100px;
   }
-  100% {
-    transform: scale(1.6);
+}
+
+@media screen and (max-width: 1450px) {
+  .sliderWrapper {
+    padding-left: 100px;
   }
+  .card__wrapper {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card__border {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 940px) {
+  .sliderWrapper {
+    padding-left: 40px;
+  }
+  .container__info_title {
+    position: absolute;
+    left: -90px;
+  }
+}
+@media screen and (max-width: 875px) {
+  .usefulInformation__title {
+    width: 220px;
+  }
+  .card__border {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 475px){
+  .card__wrapper > img {
+     width: 140px;
+  }
+
+}
+@media screen and (max-width: 344px){
+  .card__border{
+    display: none;
+  }
+
 }

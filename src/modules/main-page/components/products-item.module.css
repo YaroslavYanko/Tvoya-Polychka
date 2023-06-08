@@ -1,5 +1,3 @@
-
-
 .container {
   max-width: 1300px;
   margin: 0 auto;
@@ -144,4 +142,9 @@
   margin-top: 5px;
   height: 10px;
   width: 20%;
+}
+.info__wrapper {
+  width: 100%;
+  height: 400px;
+  background-image: url("../../../../public/images/mainBack.png");
 }

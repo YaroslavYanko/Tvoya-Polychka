@@ -6,7 +6,6 @@
   padding: 150px;
 }
 .form__page_login {
-
   display: flex;
   justify-content: center;
 }
@@ -15,16 +14,16 @@ form {
   align-items: center;
   flex-direction: column;
 }
-.from__number{
+.from__number {
   display: flex;
 }
-.form__button{
+.form__button {
   width: 100%;
 }
-.user__drop{
+.user__drop {
   position: relative;
 }
-.user__drop_menu{
+.user__drop_menu {
   position: absolute;
   width: 150px;
   display: flex;
@@ -33,39 +32,41 @@ form {
   height: 75px;
   justify-content: space-between;
   right: 0;
-  font-size: 18px;
   font-weight: 600;
-  box-shadow: 2px 7px 8px -2px rgb(32 36 41);
+  box-shadow: -10px 0px 13px -7px #000000,
+    -50px -50px 0px -30px rgba(0, 0, 0, 0);
   padding: 10px;
   z-index: 999;
 }
-.user__drop_menu a{
+
+.user__drop_menu a {
   transition: 0.5s all ease-in-out;
+  font-size: 18px;
 }
-.user__drop_menu a:hover{
+.user__drop_menu a:hover {
   color: rgb(138, 138, 138);
 }
-.user__drop_icon{
-  background:none;
+.user__drop_icon {
+  background: none;
   border: none;
   cursor: pointer;
   font-size: 30px;
   transition: 1s all;
 }
-@media (min-width: 769px) and (max-width: 1024px){
-  form{
+@media (min-width: 769px) and (max-width: 1024px) {
+  form {
     width: 90%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .container{
+  .container {
     padding: 0;
   }
   .input__login {
     padding: 0px 20px;
   }
-  .form__button{
+  .form__button {
     padding: 0 20px;
   }
 }

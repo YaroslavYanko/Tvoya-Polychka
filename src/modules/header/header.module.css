@@ -32,7 +32,7 @@ header {
 }
 .header__login a {
   display: flex;
-  font-size: 25px;
+  font-size: 30px;
   transition: 1s all;
 }
 .header__login a svg {
@@ -189,23 +189,31 @@ header {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.info__box {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.container__info_title {
+  position: absolute;
+  left: -70px;
+  transform: rotate(-90deg);
+  letter-spacing: 3px;
+  margin-top: 170px;
+}
 .container__usefulInformation img {
-  width: 500px;
-  height: 225px;
+  width: 175px;
   object-fit: cover;
+  height: 220px;
 }
 .usefulInformation__info_box {
   display: flex;
-  background-color: white;
-  align-items: center;
-  position: relative;
   margin-top: 15px;
 }
 .usefulInformation__title {
-  position: absolute;
   bottom: 20px;
-  background-color: white;
-  width: 80%;
+  width: 250px;
+  padding: 10px;
 }
 .usefulInformation__title h2 {
   font-size: 1.3rem;
@@ -244,11 +252,10 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-  
-.mainHeader_wrapper {
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 0%;
-}
+  .mainHeader_wrapper {
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 0%;
+  }
   .user__menu {
     margin: 0;
     position: absolute;
@@ -320,5 +327,4 @@ header {
     width: 100%;
     z-index: 90;
   }
-  
 }

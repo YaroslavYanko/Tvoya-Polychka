@@ -63,7 +63,8 @@
   border-bottom: 2px solid #444444;
   border-radius: 0;
   background: #444444;
-  color: wheat;
+  color: white;
+  border-radius: 3px;
 }
 .item_title h3 {
   padding-top: 15px;

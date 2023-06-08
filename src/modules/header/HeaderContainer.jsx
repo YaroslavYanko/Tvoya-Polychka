@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 import styles from "./header.module.css";
 
 import { isLoggedInReactive } from "../auth/store/reactive-vars";
-import MainSlider from "../main-page/components/MainSlider/MainSlider";
+
 import { CartSidebar } from "../cart/components/cart-sidebar";
 
 const HeaderContainer = () => {
@@ -22,7 +22,6 @@ const HeaderContainer = () => {
       }`}
     >
       <HeaderMenu isLoggedIn={isLoggedIn} />
-      {/* {mainHeader && <MainSlider />} */}
       {mainHeader && <div className={styles.mainHeader_wrapper}></div>}
       <CartSidebar />
     </div>

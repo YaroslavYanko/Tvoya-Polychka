@@ -103,8 +103,8 @@ export const CheckoutForm = ({ submitCallback ,initialValues}) => {
         control={control}
         render={({ field, fieldState }) => (
           <Input
-            label="Фамілія"
-            placeholder="Введіть вашу фамілію"
+            label="Прізвище"
+            placeholder="Введіть ваше прізвище"
             error={fieldState.error?.message}
             {...field}
           />

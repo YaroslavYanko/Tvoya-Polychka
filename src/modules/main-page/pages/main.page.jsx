@@ -2,8 +2,9 @@ import { useGetGoodsQuery } from "@app/core/types";
 import { ProductsListLoading } from "../components/products-list-loading/products-list-loading";
 import ProductsList from "../components/products-list/products-list.component";
 import styles from "../components/products-item.module.css";
-import { UsefulInformation } from "@app/modules/header/useful-information/useful-information";
+
 import { useEffect } from "react";
+import MainSlider from "../components/MainSlider/MainSlider";
 
 export const MainPage = () => {
   const { data, loading, error } = useGetGoodsQuery();
@@ -29,7 +30,14 @@ export const MainPage = () => {
 
   return (
     <div className={styles.main__page_wrapper}>
-      {/* <UsefulInformation /> */}
+    
+    <section className={styles.info__wrapper}>
+   
+  <MainSlider/>
+    </section>
+   
+
+
       {categories.map((categorie) => (
         <ProductsList
           item={categorie.goods_items}
