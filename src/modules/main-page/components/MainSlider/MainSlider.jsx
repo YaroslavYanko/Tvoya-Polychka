@@ -21,7 +21,7 @@ const MainSlider = () => {
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 4000,
     responsive: [
       {

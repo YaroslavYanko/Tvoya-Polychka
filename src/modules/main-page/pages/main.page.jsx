@@ -26,25 +26,19 @@ export const MainPage = () => {
 
   const categories = data.categories.slice(0, 2);
 
-
-
   return (
     <div className={styles.main__page_wrapper}>
-    
-    <section className={styles.info__wrapper}>
-   
-  <MainSlider/>
-    </section>
-   
+      <section className={styles.info__wrapper}>
+        <MainSlider />
+      </section>
 
-
-      {categories.map((categorie) => (
+      {/* {categories.map((categorie) => (
         <ProductsList
           item={categorie.goods_items}
           title={categorie.title}
           key={`categorie:${categorie.id}`}
         />
-      ))}
+      ))} */}
     </div>
   );
 };

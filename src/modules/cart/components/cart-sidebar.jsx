@@ -67,28 +67,28 @@ export const CartSidebar = () => {
         !isOpened ? styles.cart__sidebar_show : null
       }`}
     >
-      <div>
-      <div className={styles.cart__sidebar_title}>
-        <span>Кошик</span>
-        <button className={styles.sidebar__btn_close} onClick={closeCart}>
-          <RiCloseFill />
-        </button>
-      </div>
-
-      <div className={styles.cart__sidebar_btn}>
-        <Link to="/checkout">
-          <button
-            onClick={handleCheckoutClick}
-            className={styles.cart_sidebar_order}
-          >
-            Оформити замовлення
+      <div className={styles.cart__box}>
+        <div className={styles.cart__sidebar_title}>
+          <span>Кошик</span>
+          <button className={styles.sidebar__btn_close} onClick={closeCart}>
+            <RiCloseFill />
           </button>
-        </Link>
-      </div>
+        </div>
+
+        <div className={styles.cart__sidebar_btn}>
+          <Link to="/checkout">
+            <button
+              onClick={handleCheckoutClick}
+              className={styles.cart_sidebar_order}
+            >
+              Оформити замовлення
+            </button>
+          </Link>
+        </div>
       </div>
       {Object.keys(cartItems).length === 0 ? (
         <div className={styles.basket__items_empty}>
-          <AiOutlineShoppingCart className={styles.empty__cart}/>
+          <AiOutlineShoppingCart className={styles.empty__cart} />
           <span>Ви не добавляли товарів</span>
         </div>
       ) : (
