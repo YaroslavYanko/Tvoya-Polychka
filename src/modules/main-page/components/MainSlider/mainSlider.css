@@ -87,7 +87,9 @@
   .card__wrapper > img {
      width: 140px;
   }
-
+  .card__border {
+    width: 335px;
+  }
 }
 @media screen and (max-width: 344px){
   .card__border{

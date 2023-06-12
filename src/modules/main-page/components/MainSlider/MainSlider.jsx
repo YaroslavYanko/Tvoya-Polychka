@@ -4,7 +4,7 @@ import styles from "../../../header/header.module.css";
 
 import laikou from "../../../../images/lakoil.webp";
 import oil from "../../../../images/oil.jpg";
-import mask from "../../../../images/Mask2.png";
+import mask from "../../../../images/Mask2.webp";
 
 import dataSlider from "../../../../imgSlider.json";
 

@@ -101,7 +101,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
         <div className={styles.header__inner_logo}>
           <Link to="/">
             <h3 style={{ color: mainPage ? "#444444" : "white" }}>
-              Твоя поличка
+              ТВОЯ ПОЛИЧКА
             </h3>
           </Link>
         </div>
