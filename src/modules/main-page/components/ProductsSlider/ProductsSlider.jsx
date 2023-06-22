@@ -86,8 +86,12 @@ const ProductsSlider = () => {
   };
   return (
     <div className="sliderWrapper">
-      <h4 className="container__info_title_products">Товари-</h4>
 
+      <h4 className="container__info_title_products">Товари-</h4>
+      <div className="slider__title">
+      <h2>Популярний товар</h2>
+      </div>
+   
       <Slider className="products-slider" {...settings2}>
       <div className="card">
           <div className="card__wrapper_products">
