@@ -184,6 +184,9 @@ li.slick-active .slick-dots_products {
   .card__border {
     width: 400px;
   }
+  .container__info_title_products {
+    left: -25px;
+  }
 }
 
 @media screen and (max-width: 475px) {
