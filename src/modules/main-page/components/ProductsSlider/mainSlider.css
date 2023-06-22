@@ -150,7 +150,6 @@ li.slick-active .slick-dots_products {
     top: 15px;
   }
   .box__products_link {
-    text-align: center;
     margin-top: 30px;
   }
   .products-slider {
@@ -188,6 +187,11 @@ li.slick-active .slick-dots_products {
 }
 
 @media screen and (max-width: 475px) {
+  .card__border_products,
+  .card_wrapper_products_img {
+    width: 350px;
+    height: 350px;
+  }
   .card__wrapper_products > img {
     width: 140px;
   }
