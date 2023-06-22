@@ -143,19 +143,34 @@ li.slick-active .slick-dots_products {
   }
 }
 @media screen and (max-width: 1200px) {
-  .custom-dots{
+  .custom-dots {
     left: auto;
   }
 }
-
-
 
 @media screen and (max-width: 1000px) {
   .card__border {
     width: 400px;
   }
 }
+@media screen and (max-width: 985px) {
+  .dot-s {
+    width: 64px;
+    height: 64px;
+  }
+
+  .dot-image {
+    width: 50px;
+  }
+}
 @media screen and (max-width: 940px) {
+  .dot-s {
+    width: 74px;
+    height: 74px;
+  }
+  .dot-image {
+    width: 64px;
+  }
   .card {
     margin-top: 100px;
   }
@@ -204,7 +219,6 @@ li.slick-active .slick-dots_products {
 }
 
 @media screen and (max-width: 475px) {
-
   .card__border_products,
   .card_wrapper_products_img {
     width: 350px;
