@@ -3,7 +3,7 @@ import styles from "./inputSearch.module.css";
 import { AdvancedImage } from "@cloudinary/react";
 import { cloudinary } from "@app/core/cloudinary";
 
-import { IoSearch } from 'react-icons/io5';
+import { IoSearch } from "react-icons/io5";
 import { useGetGoodsQuery } from "@app/core/types";
 import { Link } from "react-router-dom";
 
@@ -83,17 +83,19 @@ export default function InputSearch({ inputSearchColor }) {
         color={inputSearchColor}
         onClick={handleIconClick}
       />
-      {isSearching && (
-        <input
-          ref={inputRef}
-          type="text"
-          className={styles.search__product}
-          placeholder="Пошук товару"
-          value={searchText}
-          onChange={handleInputChange}
-          onBlur={() => setClearedSearchText("")}
-        />
-      )}
+
+      <input
+        ref={inputRef}
+        type="text"
+        className={`${styles.search__product} ${
+          !isSearching ? styles.search__product_hide : ""
+        }`}
+        placeholder="Пошук товару"
+        value={searchText}
+        onChange={handleInputChange}
+        onBlur={() => setClearedSearchText("")}
+      />
+
       {isSearching && searchText && filteredProducts.length > 0 && (
         <ul className={styles.search__results}>
           {filteredProducts.map((product) => (
