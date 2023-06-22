@@ -176,6 +176,7 @@ header {
   background: none;
   font-size: 30px;
   transition: 1s all ease;
+  margin-top: 2px;
 }
 .btn__basket svg {
   transition: all 1s;
