@@ -253,7 +253,7 @@ header {
 
 @media screen and (max-width: 768px) {
   .mainHeader_wrapper {
-    border-bottom-left-radius: 100%;
+    border-bottom-left-radius: 75%;
     border-bottom-right-radius: 0%;
   }
   .user__menu {

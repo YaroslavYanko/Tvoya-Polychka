@@ -3,13 +3,13 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import styles from "./category-selector.module.css";
 
 export const CategorySelector = ({ onCategorySelect }) => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  // const [selectedCategory, setSelectedCategory] = useState("all");
   const [openMenuIndex, setOpenMenuIndex] = useState(null);
 
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
-    onCategorySelect(event.target.value);
-  };
+  // const handleCategoryChange = (event) => {
+  //   setSelectedCategory(event.target.value);
+  //   onCategorySelect(event.target.value);
+  // };
 
   const handleMenuClick = (index) => {
     setOpenMenuIndex(index === openMenuIndex ? null : index);
@@ -21,7 +21,7 @@ export const CategorySelector = ({ onCategorySelect }) => {
         <div className={styles.title}>Категорія</div>
 
         <ul>
-          <li onClick={() => onCategorySelect("all")}>Всі товари</li>
+          <li onClick={() => onCategorySelect("all")}>Показати всі товари</li>
           <li onClick={() => handleMenuClick(0)}>
             <div className={styles.wrapper__list}>
               Для волосся
@@ -54,8 +54,9 @@ export const CategorySelector = ({ onCategorySelect }) => {
 
             <ul className={openMenuIndex === 1 ? styles.show : styles.hide}>
               <li onClick={() => onCategorySelect("Patchi")}>Патчі під очі</li>
-              <li onClick={() => onCategorySelect("Mask")}>Маска</li>
-              <li onClick={() => onCategorySelect("Serum")}>Сироватка</li>   
+              <li onClick={() => onCategorySelect("Mask")}>Маска для лиця</li>
+              <li onClick={() => onCategorySelect("Serum")}>Сироватка для лиця</li>   
+              <li onClick={() => onCategorySelect("FaceScrub")}>Скраб для лиця</li>  
             </ul>
           </li>
           <li onClick={() => handleMenuClick(2)}>

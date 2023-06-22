@@ -5,6 +5,7 @@ import styles from "../components/products-item.module.css";
 
 import { useEffect } from "react";
 import MainSlider from "../components/MainSlider/MainSlider";
+import ProductsSlider from "../components/ProductsSlider/ProductsSlider";
 
 export const MainPage = () => {
   const { data, loading, error } = useGetGoodsQuery();
@@ -31,7 +32,9 @@ export const MainPage = () => {
       <section className={styles.info__wrapper}>
         <MainSlider />
       </section>
-
+      <section>
+        <ProductsSlider/>
+      </section>
       {/* {categories.map((categorie) => (
         <ProductsList
           item={categorie.goods_items}
