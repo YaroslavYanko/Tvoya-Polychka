@@ -114,7 +114,7 @@
   background: linen;
 }
 .slick-active {
-  z-index: 999;
+  z-index: 50;
 }
 .slick-prev,
 .slick-next {
