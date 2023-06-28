@@ -1,9 +1,10 @@
 .sliderWrapper {
   max-width: 1500px;
   overflow: hidden;
-  height: 750px;
   margin: auto;
   padding-top: 25px;
+  padding-bottom: 30px;
+
 }
 .card {
   overflow: hidden;
