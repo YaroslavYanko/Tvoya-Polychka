@@ -13,7 +13,6 @@ import "./slick-theme.css";
 import "./mainSlider.css";
 import { Link } from "react-router-dom";
 
-
 const MainSlider = () => {
   const settings = {
     dots: true,
@@ -21,7 +20,7 @@ const MainSlider = () => {
     speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     responsive: [
       {
@@ -52,35 +51,28 @@ const MainSlider = () => {
     ],
   };
   return (
-
-    
     <div className="sliderWrapper">
-     
-     <h4 className="container__info_title">Корисна інформація-</h4>
+      <h4 className="container__info_title">Корисна інформація-</h4>
 
       <Slider {...settings}>
-        <Link to='/blog' className="card">
+        <Link to="/blog" className="card card_info">
           <div className="card__wrapper">
             <div className="card__border"></div>
             <img src={laikou} alt="Корейський догляд за волоссям" />
 
-            <div className="usefulInformation__title">
+            <div className="usefulInformation__title blog_slider">
               <h3>Поживна арганова олія для волосся Laikou</h3>
               <br />
-              <p>
-                Привітайте здорове, сильне волосся з аргановою олією Laikou!{" "}
-                <br /> Корисні властивості мараканового масла для волосся.
-              </p>
+              <p>Корисні властивості мараканового масла для волосся.</p>
             </div>
           </div>
         </Link>
-        <Link to='/blog' className="card">
+        <Link to="/blog" className="card card_info">
           <div className="card__wrapper">
-          <div className="card__border"></div>
+            <div className="card__border"></div>
             <img src={oil} alt="" />
 
-            <div className="usefulInformation__title">
-              
+            <div className="usefulInformation__title blog_slider">
               <h3>Сироватки для лиця</h3>
               <br />
               <p>
@@ -89,12 +81,12 @@ const MainSlider = () => {
             </div>
           </div>
         </Link>
-        <Link to='/blog' className="card">
+        <Link to="/blog" className="card card_info">
           <div className="card__wrapper">
-          <div className="card__border"></div>
+            <div className="card__border"></div>
             <img src={mask} alt="" />
 
-            <div className="usefulInformation__title">
+            <div className="usefulInformation__title blog_slider">
               <h3>Маски для лиця</h3>
               <br />
               <p>

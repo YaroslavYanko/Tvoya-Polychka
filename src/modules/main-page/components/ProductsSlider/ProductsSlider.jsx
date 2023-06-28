@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import dots1 from "../../../../images/foundation.png";
 import dots2 from "../../../../images/serum.png";
 
+import ReactPlayer from 'react-player';
+
 import "./slick.css";
 import "./slick-theme.css";
 import "./mainSlider.css";
@@ -17,7 +19,7 @@ const ProductsSlider = () => {
     speed: 500,
     fade: true,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
     responsive: [
@@ -86,11 +88,22 @@ const ProductsSlider = () => {
   };
   return (
     <div className="sliderWrapper">
-
+{/* <ReactPlayer
+  url="https://www.youtube.com/watch?v=LLJSfU8oD60"
+  width="640"
+  height="640"
+  playing
+  controls={false}
+  config={{
+    youtube: {
+      playerVars: {
+        modestbranding: 1,
+      },
+    },
+  }}
+/> */}
       <h4 className="container__info_title_products">Товари-</h4>
-      <div className="slider__title">
-      <h2>Популярний товар</h2>
-      </div>
+
    
       <Slider className="products-slider" {...settings2}>
       <div className="card">
@@ -110,6 +123,7 @@ const ProductsSlider = () => {
               <h3>Нічна медова маска для обличчя з ріпаком</h3>
             </div>
           </div>
+    
         </div>
         <div className="card">
           <div className="card__wrapper_products">

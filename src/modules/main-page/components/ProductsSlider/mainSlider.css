@@ -3,6 +3,7 @@
   overflow: hidden;
   height: 750px;
   margin: auto;
+  padding-top: 25px;
 }
 .card {
   overflow: hidden;
@@ -25,11 +26,11 @@
   position: absolute;
   width: 500px;
   height: 500px;
-  border-left: solid #3498db 3px;
+  border-left: solid #444444 3px;
   margin-left: 0px;
   margin-top: 0px;
   border-radius: 100%;
-  border-right: solid #3498db 3px;
+  border-right: solid #444444 3px;
 
   /* Анімація */
   animation-name: rotate;
@@ -68,7 +69,7 @@
 }
 .usefulInformation__title_products {
   width: 100%;
-  padding: 10px;
+  padding-top: 10px;
   text-align: center;
 }
 .container__usefulInformation {
@@ -112,8 +113,8 @@
   border-radius: 100%;
 }
 .slick-active > .custom-dot > .dot-s {
-  border: solid 2px #3498db;
-  background: linen;
+  border: solid 2px #444444;
+  /* background: hsl(288, 59%, 93%); */
 }
 .slick-active {
   z-index: 50;
@@ -124,7 +125,7 @@
 }
 
 li.slick-active .slick-dots_products {
-  background-color: #3498db;
+  background-color:#444444;
   border: solid black 1px;
 }
 
@@ -154,6 +155,14 @@ li.slick-active .slick-dots_products {
   }
 }
 @media screen and (max-width: 985px) {
+  .slick-slider{
+    padding-right: 25px;
+
+  }
+  .slick-dots_products {
+    margin-left: 27px;
+  }
+  
   .dot-s {
     width: 64px;
     height: 64px;
@@ -164,13 +173,7 @@ li.slick-active .slick-dots_products {
   }
 }
 @media screen and (max-width: 940px) {
-  .dot-s {
-    width: 74px;
-    height: 74px;
-  }
-  .dot-image {
-    width: 64px;
-  }
+
   .card {
     margin-top: 100px;
   }
@@ -219,6 +222,10 @@ li.slick-active .slick-dots_products {
 }
 
 @media screen and (max-width: 475px) {
+  
+  .dot-image {
+    width: 40px;
+  }
   .card__border_products,
   .card_wrapper_products_img {
     width: 350px;
@@ -234,8 +241,39 @@ li.slick-active .slick-dots_products {
     font-size: 15px;
   }
 }
+@media screen and (max-width: 415px) {
+  .card__border_products,
+  .card_wrapper_products_img {
+    width: 250px;
+    height: 250px;
+    margin-left: 14px;
+  }
+  .card_wrapper_products_img > img {
+    width: 180px;
+    height: 180px;
+  }
+}
 @media screen and (max-width: 344px) {
   .card__border {
     display: none;
+  }
+    
+  .dot-s {
+    width: 50px;
+    height: 50px;
+  }
+  .slick-dots_products {
+    margin-left: 21px;
+  }
+}
+@media screen and (max-width: 320px){
+  .card__border_products,
+  .card_wrapper_products_img {
+    width: 200px;
+    height: 200px;
+  }
+  .card_wrapper_products_img > img {
+    width: 150px;
+    height: 150px;
   }
 }

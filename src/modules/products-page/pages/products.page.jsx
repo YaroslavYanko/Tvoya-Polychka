@@ -57,6 +57,8 @@ const allProducts = data.categories.reduce((acc, category) => {
 
         <ProductsListGeneral products={products} selectedCategory={selectedCategory}/>
       </div>
+
+      <ProductsListLoading items={8} />;
     </div>
   );
 };

@@ -19,7 +19,8 @@ export const MainPage = () => {
     return <h3>Ого , здається сталась помилка , зайдіт пізніше</h3>;
   }
   if (loading) {
-    return <ProductsListLoading items={8} />;
+    // return <ProductsListLoading items={8} />;
+    return console.log('Загрузка')
   }
   if (!data) {
     return <h3>Хм , мабуть товари закінчились , зайдіт пізніше</h3>;

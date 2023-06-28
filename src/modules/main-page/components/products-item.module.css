@@ -148,3 +148,19 @@
   height: 400px;
   background-image: url("../../../../public/images/mainBack.png");
 }
+
+
+@media screen and (max-width: 768px){
+
+  .skeleton__img{
+    width: 180px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 580px){
+
+  .skeleton__img{
+    width: 155px;
+    height: 150px;
+  }
+}

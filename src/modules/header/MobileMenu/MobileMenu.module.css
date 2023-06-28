@@ -24,7 +24,7 @@
     font-size: 35px;
     color: #444444;
   }
-  .mobile__menu_show{
+  .mobile__menu_show {
     transform: translateY(0%);
   }
   .mobile__menu nav ul {
@@ -34,39 +34,10 @@
     height: 100vh;
     font-size: 2rem;
   }
-
 }
 
-@media (max-width: 320px) {
- 
-}
-
-
-@media (min-width: 321px) and (max-width: 375px) {
-
-}
-
-
-@media (min-width: 376px) and (max-width: 414px) {
- 
-}
-
-
-@media (min-width: 415px) and (max-width: 768px) {
-
-}
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-}
-
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-
-}
-
-
-@media (min-width: 1441px) {
- 
+@media screen and (max-width: 385px) {
+  .mobile__menu nav ul {
+    font-size: 1.5rem;
+  }
 }

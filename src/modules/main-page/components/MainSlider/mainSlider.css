@@ -73,6 +73,9 @@
     position: absolute;
     left: -90px;
   }
+  .card_info{
+    margin-top: 50px !important;
+  }
 }
 @media screen and (max-width: 875px) {
   .usefulInformation__title {
@@ -91,9 +94,22 @@
     width: 335px;
   }
 }
+@media screen and (max-width: 410px){
+   .card__border{
+    display: none;
+   }
+   .blog_slider{
+    width: 100% !important;
+   }
+} 
 @media screen and (max-width: 344px){
   .card__border{
     display: none;
   }
-
+.card__wrapper > img{
+  width: 100px;
+}
+.blog_slider h3{
+  font-size: 1rem;
+}
 }
