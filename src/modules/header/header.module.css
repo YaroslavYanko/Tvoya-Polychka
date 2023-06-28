@@ -258,7 +258,11 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-
+  .header__inner{
+    top: 85px;
+    margin: 0;
+    width: auto;
+  }
   .user__menu {
     margin: 0;
     position: absolute;
@@ -332,16 +336,7 @@ header {
     z-index: 90;
   }
 }
-@media screen and (max-width: 560px) {
-  .header__inner{
-    top: 85px;
-    margin: 0;
-    width: auto;
-  }
-}
-@media screen and (max-width: 415px){
 
-}
 @media screen and (max-width: 385px){
   .header__inner_logo > a > h3 {
     font-size: 1rem;

@@ -4,8 +4,6 @@ import Slider from "react-slick";
 import dots1 from "../../../../images/foundation.png";
 import dots2 from "../../../../images/serum.png";
 
-import ReactPlayer from 'react-player';
-
 import "./slick.css";
 import "./slick-theme.css";
 import "./mainSlider.css";
@@ -88,20 +86,6 @@ const ProductsSlider = () => {
   };
   return (
     <div className="sliderWrapper">
-{/* <ReactPlayer
-  url="https://www.youtube.com/watch?v=LLJSfU8oD60"
-  width="640"
-  height="640"
-  playing
-  controls={false}
-  config={{
-    youtube: {
-      playerVars: {
-        modestbranding: 1,
-      },
-    },
-  }}
-/> */}
       <h4 className="container__info_title_products">Товари-</h4>
 
    
