@@ -280,7 +280,7 @@ header {
 
 @media screen and (max-width: 768px) {
   .header__inner{
-    top: 85px;
+    top: 65px;
     margin: 0;
     width: auto;
   }
@@ -374,4 +374,11 @@ header {
   .header__inner_logo > a > h3 {
     font-size: 0.8rem;
   }
+}
+
+@media screen and (max-width: 270px){
+  .header__inner_logo > a > h3 {
+    font-size: 0.5rem;
+  }
+
 }
