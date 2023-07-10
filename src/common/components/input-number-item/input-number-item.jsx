@@ -1,5 +1,5 @@
-import { forwardRef, useId } from "react";
-import { AiOutlineMinusCircle,AiOutlinePlusCircle } from  "react-icons/ai";
+import { forwardRef } from "react";
+import { AiOutlineMinusCircle, AiOutlinePlusCircle } from  "react-icons/ai";
 
 import styles from "./input-number.module.css";
 
@@ -17,8 +17,6 @@ export const InputNumber = forwardRef(
     },
     ref
   ) => {
-    const inputId = useId();
-
     const onHandlerDecrement = () => {
       if (setValue && value) {
         setValue(value - 1);
@@ -32,24 +30,17 @@ export const InputNumber = forwardRef(
 
     return (
       <div className={styles.input__login}>
-
         <div className={styles.input__login_value}>
           <button
-             style={{marginRight: '5px'}}
+            style={{ marginRight: '5px' }}
             className={styles.input__number_btn}
             onClick={onHandlerDecrement}
           >
-           <AiOutlineMinusCircle/>
+            <AiOutlineMinusCircle/>
           </button>
-          <input
-            className={styles.input__phone}
-            ref={ref}
-            type="number"
-            value={value ?? 0}
-            id={inputId}
-            readOnly
-            {...props}
-          />
+          <span className={styles.input__phone}>
+            {value ?? 0}
+          </span>
           <button
             className={`${styles.input__number_btn} ${styles.btn__plus}`}
             onClick={onHandlerIncrement}
@@ -57,7 +48,6 @@ export const InputNumber = forwardRef(
             <AiOutlinePlusCircle/>
           </button>
         </div>
-
       </div>
     );
   }
