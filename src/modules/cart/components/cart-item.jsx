@@ -7,16 +7,18 @@ import { changeCartItemAmount, remoceItemFromCart } from "../store/cart-state";
 import { BsTrash } from "react-icons/bs";
 
 
-export const CartItem = ({ image, price, shortName, count, productItemId }) => {
+export const CartItem = ({ image, price, shortName, count, productItemId ,handleUpdateToCart}) => {
 
   const imageCloud = cloudinary.image(image);
 
   const handleChangeAmount = (amount) => {
     changeCartItemAmount(productItemId, amount);
+    handleUpdateToCart()
   };
 
   const handleDeleteItem = () => {
     remoceItemFromCart(productItemId);
+    handleUpdateToCart()
   };
 
   return (

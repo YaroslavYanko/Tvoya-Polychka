@@ -7,7 +7,7 @@ import { ProductItem } from "../components/product-item/product-item";
 import style from "../product-info-page.module.css";
 import { useEffect } from "react";
 
-export const ProductInfoPage = () => {
+export const ProductInfoPage = ({handleUpdateToCart}) => {
   const { id } = useParams();
 
   const { data, loading, error } = useGetProductsItemsQuery({
@@ -36,7 +36,7 @@ export const ProductInfoPage = () => {
     <div>
       <LineImages />
       <div className={style.wrapper__product_page}>
-        <ProductItem {...data.goods[0]}  count={cartItems[id]} />
+        <ProductItem handleUpdateToCart={handleUpdateToCart} {...data.goods[0]}  count={cartItems[id]} />
       </div>
     </div>
   );

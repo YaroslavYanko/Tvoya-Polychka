@@ -6,7 +6,7 @@ import styles from "./products-list.module.css";
 
 const PAGE_SIZE = 28;
 
-const ProductsListGeneral = ({ products,selectedCategory }) => {
+const ProductsListGeneral = ({ products,selectedCategory,handleUpdateToCart }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const LeftArrowIcon = () => <FaArrowLeft />;
@@ -48,7 +48,7 @@ const ProductsListGeneral = ({ products,selectedCategory }) => {
     <div>
       <div className={styles.container}>
         {visibleProducts.map((item) => (
-          <ProductItemGeneral {...item} key={`productsGeneral-${item.id}`} />
+          <ProductItemGeneral handleUpdateToCart={handleUpdateToCart} {...item} key={`productsGeneral-${item.id}`} />
         ))}
       </div>
 

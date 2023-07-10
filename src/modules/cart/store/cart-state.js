@@ -31,6 +31,8 @@ export const addItemToCart = (id) => {
     cart[id] = 1;
   }
   saveCartState(cart);
+
+
 };
 
 export const changeCartItemAmount = (id, amount) => {
@@ -42,7 +44,7 @@ export const changeCartItemAmount = (id, amount) => {
   }
 
   cart[id] = amount;
-
+  
   saveCartState(cart);
 };
 

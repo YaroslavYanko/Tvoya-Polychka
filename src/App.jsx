@@ -6,7 +6,7 @@ import { Route } from "react-router";
 import { ProductsPage } from "./modules/products-page/pages/products.page";
 import { LoginFormPage } from "./modules/auth/page/login-form.page";
 import { Helmet } from "react-helmet";
-import { useEffect } from "react";
+import { createContext, useEffect, useState } from "react";
 import { isLoggedInReactive } from "./modules/auth/store/reactive-vars";
 import { ProfilePage } from "./modules/user/pages/profile-page";
 import { PrivateRoute } from "./common/components/private-route/private-route.component";
@@ -18,26 +18,63 @@ import { Delivery } from "./modules/delivery/delivery";
 import { Rules } from "./modules/rules/rules";
 import { Blog } from "./modules/blog/blog";
 
+export const TotalQuantityContext = createContext();
+
 function App() {
+
+  const [totalQuantity, setTotalQuantity] = useState(0);
+
+
+    const updateTotalQuantity = () => {
+      const state = localStorage.getItem("cart_state");
+      const stateObj = JSON.parse(state);
+      let newTotalQuantity = 0;
+  
+      for (const key in stateObj) {
+        if (stateObj.hasOwnProperty(key)) {
+          newTotalQuantity += stateObj[key];
+        }
+      }
+  
+      setTotalQuantity(newTotalQuantity);
+    }
+  
+
+
+  const handleUpdateToCart = () => {
+    updateTotalQuantity()
+  };
+
   useEffect(() => {
     const token = localStorage.getItem("jwt");
     isLoggedInReactive(Boolean(token));
-
+   
     window.scrollTo(0, 0);
   }, []);
+
+    // Підписуємося на зміну totalQuantity
+    useEffect(() => {
+      updateTotalQuantity();
+    }, []);
+
+    
 
   return (
     <BrowserRouter>
       <Helmet titleTemplate="Твоя поличка - %s" defaultTitle="Твоя поличка" />
 
       <div className="wrapper__page">
-        <HeaderContainer />
+      <TotalQuantityContext.Provider value={totalQuantity}>
+      {/* Передаємо totalQuantity до компонента HeaderMenu */}
+      <HeaderContainer handleUpdateToCart={handleUpdateToCart}/>
+    </TotalQuantityContext.Provider>
+   
 
         <Routes>
           <Route path="/login" element={<LoginFormPage />} />
           <Route path="/" element={<MainPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/products/:id" element={<ProductInfoPage />} />
+          <Route path="/products" element={<ProductsPage  handleUpdateToCart={handleUpdateToCart} />} />
+          <Route path="/products/:id" element={<ProductInfoPage handleUpdateToCart ={handleUpdateToCart} />} />
           <Route
             path="/profile"
             element={

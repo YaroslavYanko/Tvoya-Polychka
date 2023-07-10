@@ -9,7 +9,7 @@ import { isLoggedInReactive } from "../auth/store/reactive-vars";
 
 import { CartSidebar } from "../cart/components/cart-sidebar";
 
-const HeaderContainer = () => {
+const HeaderContainer = ({handleUpdateToCart}) => {
   let isLoggedIn = useReactiveVar(isLoggedInReactive);
 
   const location = useLocation();
@@ -23,7 +23,7 @@ const HeaderContainer = () => {
     >
       <HeaderMenu isLoggedIn={isLoggedIn} />
       {mainHeader && <div className={styles.mainHeader_wrapper}></div>}
-      <CartSidebar />
+      <CartSidebar  handleUpdateToCart={handleUpdateToCart} />
     </div>
   );
 };

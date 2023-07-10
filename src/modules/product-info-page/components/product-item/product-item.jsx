@@ -19,6 +19,7 @@ export const ProductItem = ({
   ingredients,
   id,
   count,
+  handleUpdateToCart,
 }) => {
   const imageCloud = cloudinary.image(image);
 
@@ -40,10 +41,12 @@ export const ProductItem = ({
 
   const handleChangeAmount = (amount) => {
     changeCartItemAmount(id, amount);
+    handleUpdateToCart()
   };
 
-  const handleAddToCart = () => {
+  const handleClick = () => {
     addItemToCart(id);
+    handleUpdateToCart()
   };
 
   return (
@@ -74,7 +77,7 @@ export const ProductItem = ({
                 <span>{price} грн</span>
               </div>
             </div>
-            <button onClick={handleAddToCart}>до кошика</button>
+            <button onClick={handleClick}>до кошика</button>
           </div>
         </div>
 

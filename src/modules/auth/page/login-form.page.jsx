@@ -8,6 +8,7 @@ import { LoginForm } from "../components/login-form.components";
 import { isLoggedInReactive } from "../store/reactive-vars";
 import { Helmet } from "react-helmet";
 import styles from "./login-form-page.module.css";
+import { LineImages } from "@app/common/components/line-images/line-images";
 
 export const LoginFormPage = () => {
   const navigate = useNavigate();
@@ -45,9 +46,10 @@ export const LoginFormPage = () => {
 
   return (
     <>
-    <Helmet>
-       <title>Вхід</title>
-    </Helmet>
+      <LineImages />
+      <Helmet>
+        <title>Вхід</title>
+      </Helmet>
       <div className={styles.container}>
         <div className={styles.form__page_login}>
           <LoginForm

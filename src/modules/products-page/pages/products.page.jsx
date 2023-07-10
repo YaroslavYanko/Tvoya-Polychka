@@ -7,7 +7,7 @@ import { CategorySelector } from "../components/category-selector/category-selec
 import styles from "./products.page.module.css";
 import { LineImages } from "@app/common/components/line-images/line-images";
 
-export const ProductsPage = () => {
+export const ProductsPage = ({handleUpdateToCart}) => {
   const { data, loading, error } = useGetGoodsQuery();
 
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -55,8 +55,9 @@ const allProducts = data.categories.reduce((acc, category) => {
   
         <CategorySelector onCategorySelect={handleCategorySelect} />
 
-        <ProductsListGeneral products={products} selectedCategory={selectedCategory}/>
+        <ProductsListGeneral handleUpdateToCart={handleUpdateToCart} products={products} selectedCategory={selectedCategory}/>
       </div>
+
 
     </div>
   );

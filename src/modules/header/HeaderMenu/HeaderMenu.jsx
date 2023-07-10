@@ -6,11 +6,14 @@ import { AiOutlineShopping, AiOutlineImport } from "react-icons/ai";
 import { RiMenu2Fill } from "react-icons/ri";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { openMobileMenu } from "../MobileMenu/store/mobile-state";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import InputSearch from "@app/common/components/input-searh/inputSearch";
-import { CgEnter } from 'react-icons/cg';
+import { CgEnter } from "react-icons/cg";
 
-import { BiShoppingBag } from 'react-icons/bi';
+import { BiShoppingBag } from "react-icons/bi";
+import { TotalQuantityContext } from "../../../App";
+
+
 
 const HeaderMenu = ({ isLoggedIn }) => {
   const location = useLocation();
@@ -19,6 +22,13 @@ const HeaderMenu = ({ isLoggedIn }) => {
   const mainPage = location.pathname !== "/";
 
   const [isFixed, setIsFixed] = useState(false);
+
+  const totalQuantity = useContext(TotalQuantityContext);
+  
+
+  useEffect(() => {
+    // Оновлення компонента при зміні totalQuantity
+  }, [totalQuantity]);
 
   const inputSearchColor = isFixed ? "white" : mainPage ? "#444444" : "white";
 
@@ -35,6 +45,8 @@ const HeaderMenu = ({ isLoggedIn }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
 
   return (
     <header style={{ position: mainPage ? "static" : "absolute" }}>
@@ -94,6 +106,13 @@ const HeaderMenu = ({ isLoggedIn }) => {
               }}
             />
           </button>
+          {totalQuantity > 0 ? (
+            <div className={styles.basket__num}>
+              <span>{totalQuantity}</span>
+            </div>
+          ) : (
+            ""
+          )}
         </Link>
       </div>
 

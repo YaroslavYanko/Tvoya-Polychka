@@ -86,7 +86,18 @@ header {
   display: flex;
   justify-content: center;
 }
-
+.basket__num{
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+  background-color: orangered;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6px;
+  color: white;
+}
 .header__menu_nav {
   width: 755px;
   display: flex;
@@ -98,7 +109,7 @@ header {
 .header__category {
   position: relative;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: 1s all;
 }
 .header__category_color {

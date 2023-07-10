@@ -4,7 +4,7 @@ import { CartItem } from "../cart-item";
 
 import styles from "../cart-sidebar.module.css";
 
-export const CartList = () => {
+export const CartList = ({handleUpdateToCart}) => {
   const { data, previousData, cartItems } = useCartItems();
 
   const cartSum =
@@ -21,6 +21,7 @@ export const CartList = () => {
         {(data || previousData)?.goods.map((item) => (
           <CartItem
             {...item}
+            handleUpdateToCart={handleUpdateToCart}
             count={cartItems[item.id]}
             productItemId={item.id}
             key={`product-cart-item-${item.id}`}

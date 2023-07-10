@@ -12,7 +12,7 @@ import { RiCloseFill } from "react-icons/ri";
 
 import styles from "./cart-sidebar.module.css";
 
-export const CartSidebar = () => {
+export const CartSidebar = ({handleUpdateToCart}) => {
   const isOpened = useReactiveVar(cartOpenedState);
   const cartItems = useReactiveVar(cartState);
 
@@ -21,7 +21,6 @@ export const CartSidebar = () => {
       productsIds: Object.keys(cartItems),
     },
   });
-
   const disableBodyScroll = () => {
     document.body.classList.add("scroll-lock");
   };
@@ -92,7 +91,7 @@ export const CartSidebar = () => {
           <span>Ви не добавляли товарів</span>
         </div>
       ) : (
-        <CartList />
+        <CartList handleUpdateToCart={handleUpdateToCart}/>
       )}
     </div>
   );

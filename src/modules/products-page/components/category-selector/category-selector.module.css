@@ -9,6 +9,9 @@
 .sidebar >ul{
     border-top:  1px solid #9b9b9b;
 }
+.title{
+  cursor: pointer;
+}
 .sidebar .title {
   color:#444444;
   font-size: 24px;

@@ -5,11 +5,19 @@ import { cloudinary } from "@app/core/cloudinary";
 import { addItemToCart } from "@app/modules/cart/store/cart-state";
 import { Link } from "react-router-dom";
 
-export const ProductItemGeneral = ({ shortName, title, image, price, id }) => {
+export const ProductItemGeneral = ({
+  shortName,
+  image,
+  price,
+  id,
+  handleUpdateToCart,
+}) => {
   const imageCloud = cloudinary.image(image);
 
-  const handleAddToCart = () => {
+  const handleClick = () => {
+    // Викликаємо оригінальну функцію handleAddToCart
     addItemToCart(id);
+    handleUpdateToCart();
   };
 
   return (
@@ -26,7 +34,7 @@ export const ProductItemGeneral = ({ shortName, title, image, price, id }) => {
           </div>
         </div>
       </Link>
-      <button className={styles.btn__card} onClick={handleAddToCart}>
+      <button className={styles.btn__card} onClick={handleClick}>
         до кошика
       </button>
     </div>
