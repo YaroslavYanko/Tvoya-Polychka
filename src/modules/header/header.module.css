@@ -4,7 +4,17 @@ header {
   position: absolute;
   z-index: 999;
 }
-
+.header__fixed{
+  position: fixed !important;
+  background-color: #444444;;
+  height: 100px;
+}
+.header__fixed_text{
+  color: white !important;
+}
+.header__fixed_text_menu> li>a{
+  color: white !important;
+}
 .header__wrapper {
   width: 100%;
   position: relative;

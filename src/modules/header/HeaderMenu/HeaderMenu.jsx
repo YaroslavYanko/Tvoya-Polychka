@@ -49,7 +49,8 @@ const HeaderMenu = ({ isLoggedIn }) => {
 
 
   return (
-    <header style={{ position: mainPage ? "static" : "absolute" }}>
+<header style={{ position: mainPage ? "static" : "absolute"}} className={`${isFixed ? styles.header__fixed : '' }`}>
+
       <MobileMenu />
       <div
         className={`${styles.wrapperMenuBtn} ${
@@ -119,7 +120,7 @@ const HeaderMenu = ({ isLoggedIn }) => {
       <div className={styles.header__inner}>
         <div className={styles.header__inner_logo}>
           <Link to="/">
-            <h3 style={{ color: mainPage ? "#444444" : "white" }}>
+            <h3 style={{ color: mainPage ? "#444444" : "white" }} className={`${isFixed ? styles.header__fixed_text : '' }`}>
               ТВОЯ ПОЛИЧКА
             </h3>
           </Link>
@@ -128,7 +129,8 @@ const HeaderMenu = ({ isLoggedIn }) => {
 
       <div className={styles.header__menu}>
         <nav>
-          <ul className={styles.header__menu_nav}>
+        <ul className={`${styles.header__menu_nav} ${isFixed ? styles.header__fixed_text_menu : ''}`}>
+
             <li>
               <Link
                 className={`${styles.header__category} ${styles.active} ${
