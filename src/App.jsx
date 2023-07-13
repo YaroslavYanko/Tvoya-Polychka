@@ -17,6 +17,7 @@ import HeaderContainer from "./modules/header/HeaderContainer";
 import { Delivery } from "./modules/delivery/delivery";
 import { Rules } from "./modules/rules/rules";
 import { Blog } from "./modules/blog/blog";
+import { InfoBlog } from "./modules/blog/Info-Blog/InfoBlog";
 
 export const TotalQuantityContext = createContext();
 
@@ -75,6 +76,8 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/products" element={<ProductsPage  handleUpdateToCart={handleUpdateToCart} />} />
           <Route path="/products/:id" element={<ProductInfoPage handleUpdateToCart ={handleUpdateToCart} />} />
+          <Route path="/blog/:id" element={<InfoBlog/>} />
+          
           <Route
             path="/profile"
             element={
@@ -88,6 +91,7 @@ function App() {
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/rules" element={<Rules />} />
+       
         </Routes>
         <Footer />
       </div>

@@ -363,18 +363,14 @@ header {
     font-size: 1rem;
   }
 }
+
 @media screen and (max-width: 340px){
   .header__inner_logo > a > h3 {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 }
-@media screen and (max-width: 340px){
 
-  .header__inner_logo > a > h3 {
-    font-size: 0.8rem;
-  }
-}
 
 @media screen and (max-width: 270px){
   .header__inner_logo > a > h3 {

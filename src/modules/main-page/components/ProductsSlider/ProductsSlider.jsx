@@ -1,10 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
 
-import dots1 from "../../../../images/foundation.png";
-import dots2 from "../../../../images/serum.png";
-import dots3 from "../../../../images/faceMask.png";
-import dots4 from "../../../../images/cream.png";
+import dots4 from "../../../../images/lotion.png";
+import dots1 from "../../../../images/facial-foam.png";
+import dots2 from "../../../../images/toner.png";
+import dots3 from "../../../../images/moisturizer.png";
+
 
 import "./slick.css";
 import "./slick-theme.css";
@@ -49,22 +50,22 @@ const ProductsSlider = () => {
       <div className="custom-dot" key={index}>
         {index === 0 && (
           <div className={`dot-s`}>
-            <img className="dot-image glob-small" src={dots3} alt="Dot 1" />
+            <img className="dot-image" src={dots3} alt="Dot 1" />
           </div>
         )}
         {index === 1 && (
           <div className={`dot-s`}>
-            <img className="dot-image glob" src={dots2} alt="Dot 2" />
+            <img className="dot-image" src={dots2} alt="Dot 2" />
           </div>
         )}
         {index === 2 && (
           <div className={`dot-s`}>
-            <img className="dot-image glob" src={dots1} alt="Dot 2" />{" "}
+            <img className="dot-image" src={dots1} alt="Dot 2" />{" "}
           </div>
         )}
         {index === 3 && (
           <div className={`dot-s`}>
-            <img className="dot-image glob-small" src={dots4} alt="Dot 2" />
+            <img className="dot-image" src={dots4} alt="Dot 2" />
           </div>
         )}
 

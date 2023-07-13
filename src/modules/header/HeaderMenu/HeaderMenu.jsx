@@ -2,7 +2,6 @@ import styles from "../header.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { UserDropdown } from "@app/modules/auth/components/user-dropdown.component";
 import { toggleCart } from "@app/modules/cart/store/cart-opened-state";
-import { AiOutlineShopping, AiOutlineImport } from "react-icons/ai";
 import { RiMenu2Fill } from "react-icons/ri";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { openMobileMenu } from "../MobileMenu/store/mobile-state";

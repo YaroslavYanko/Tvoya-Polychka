@@ -5,6 +5,7 @@ import styles from "../../../header/header.module.css";
 import laikou from "../../../../images/lakoil.webp";
 import oil from "../../../../images/oil.jpg";
 import mask from "../../../../images/Mask2.webp";
+import artwork4 from "../../../../images/artwork4.jpg";
 
 import dataSlider from "../../../../imgSlider.json";
 
@@ -84,13 +85,14 @@ const MainSlider = () => {
         <Link to="/blog" className="card card_info">
           <div className="card__wrapper">
             <div className="card__border"></div>
-            <img src={mask} alt="" />
+            <img src={artwork4} alt="" />
 
             <div className="usefulInformation__title blog_slider">
-              <h3>Маски для лиця</h3>
+              <h3>Догляд за шкірою лиця</h3>
               <br />
               <p>
-                Здивуйте свою шкіру: Отримайте сяйво з сироватками для обличчя!
+                Шкіра обличчя потребує належного догляду, щоб виглядати здорово
+                і сяюче.
               </p>
             </div>
           </div>

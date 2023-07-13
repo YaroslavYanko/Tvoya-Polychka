@@ -1,5 +1,62 @@
-.blog__wrapper{
-  width: 100%;
-   text-align: center;
-   padding-top: 50px;
+.blog__wrapper {
+  width: 1300px;
+  text-align: center;
+  padding-top: 50px;
+  margin: auto;
+  display: flex;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.blog__box {
+  display: flex;
+  width: 600px;
+  background-color: aliceblue;
+  margin-top: 15px;
+  margin-left: 35px;
+}
+.blog__box img {
+  width: 300px;
+  height: auto;
+}
+.blog__description p {
+  text-align: left;
+  font-size: 1.1rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.blog__description {
+  padding-top: 15px;
+  text-align: left;
+  padding: 15px;
+}
+.blog__link{
+  text-decoration: underline;
+}
+@media screen and (max-width: 1300px) {
+  .blog__wrapper {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .blog__box {
+    margin-top: 35px;
+    width: 94%;
+  }
+}
+
+@media screen and (max-width: 638px) {
+  .blog__box {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .blog__box {
+    background: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .blog__box img {
+    width: 100%;
+  }
 }
