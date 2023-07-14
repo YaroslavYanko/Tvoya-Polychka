@@ -1,20 +1,24 @@
 import React from "react";
 import Slider from "react-slick";
-import styles from "../../../header/header.module.css";
 
 import laikou from "../../../../images/lakoil.webp";
 import oil from "../../../../images/oil.jpg";
-import mask from "../../../../images/Mask2.webp";
 import artwork4 from "../../../../images/artwork4.jpg";
 
-import dataSlider from "../../../../imgSlider.json";
+
+
 
 import "./slick.css";
 import "./slick-theme.css";
 import "./mainSlider.css";
+
 import { Link } from "react-router-dom";
 
 const MainSlider = () => {
+
+
+
+
   const settings = {
     dots: true,
     infinite: true,
@@ -56,7 +60,8 @@ const MainSlider = () => {
       <h4 className="container__info_title">Корисна інформація-</h4>
 
       <Slider {...settings}>
-        <Link to="/blog" className="card card_info">
+        <Link to="/blog/2" className="card card_info">
+
           <div className="card__wrapper">
             <div className="card__border"></div>
             <img src={laikou} alt="Корейський догляд за волоссям" />
@@ -68,7 +73,7 @@ const MainSlider = () => {
             </div>
           </div>
         </Link>
-        <Link to="/blog" className="card card_info">
+        <Link to="/blog/3" className="card card_info">
           <div className="card__wrapper">
             <div className="card__border"></div>
             <img src={oil} alt="" />
@@ -82,7 +87,7 @@ const MainSlider = () => {
             </div>
           </div>
         </Link>
-        <Link to="/blog" className="card card_info">
+        <Link to="/blog/1" className="card card_info" >
           <div className="card__wrapper">
             <div className="card__border"></div>
             <img src={artwork4} alt="" />

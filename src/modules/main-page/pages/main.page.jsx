@@ -1,6 +1,5 @@
 import { useGetGoodsQuery } from "@app/core/types";
 import { ProductsListLoading } from "../components/products-list-loading/products-list-loading";
-import ProductsList from "../components/products-list/products-list.component";
 import styles from "../components/products-item.module.css";
 
 import { useEffect } from "react";
@@ -36,13 +35,6 @@ export const MainPage = () => {
       <section>
         <ProductsSlider/>
       </section>
-      {/* {categories.map((categorie) => (
-        <ProductsList
-          item={categorie.goods_items}
-          title={categorie.title}
-          key={`categorie:${categorie.id}`}
-        />
-      ))} */}
     </div>
   );
 };
