@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { CheckoutForm } from "../checkout-form";
 import styles from "../checkout.module.css";
 
-export const CheckoutPage = () => {
+export const CheckoutPage = ({handleUpdateToCart}) => {
   const cart = useReactiveVar(cartState);
 
   const navigate = useNavigate();
@@ -20,7 +20,6 @@ export const CheckoutPage = () => {
   }, []);
   
   useEffect(() => {
-    //Object.keys повертає ключі обєкта
     if (Object.keys(cart).length === 0) {
       navigate("/", { replace: true });
     }
@@ -64,7 +63,7 @@ export const CheckoutPage = () => {
             submitCallback={handleCheckoutSubmit}
             initialValues={data}
           />
-          <CartList />
+          <CartList handleUpdateToCart={handleUpdateToCart} />
         </div>
       </div>
     </div>

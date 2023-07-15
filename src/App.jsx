@@ -86,7 +86,7 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/checkout" element={<CheckoutPage handleUpdateToCart ={handleUpdateToCart} />} />
           <Route path="/checkout/thakns-you" element={<ThankYouPage />} />
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/blog" element={<Blog />} />
